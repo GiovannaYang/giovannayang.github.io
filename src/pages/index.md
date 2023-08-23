@@ -8,6 +8,11 @@ socials:
     link: "mailto:yqr533@gmail.com"
   - icon: i-eva:github-outline
     link: https://github.com/QirongY
+  - icon: i-ri:bilibili-line
+    link: https://space.bilibili.com/93878345?spm_id_from=333.337.0.0
+  - icon: i-ion:planet-outline
+    link: https://yqr.netlify.app
+    name: Blog
   - icon: i-ri:game-line
     link: 
     name: Portfolio
@@ -97,10 +102,10 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 - 🕹️ My portfolio/cv is still being improved...
 
-- 🖥 Ex-PhOer
+- 🔭 Ex-PhOer
 
 - 🎮 I'm currently interested in **Honkai: Star Rail** and **Genshin Impact**
 
 - 💯 My dream: `while(sleeping){GPA++;}`
 
-- 🔭 Still confused (◞‸◟ )
+- 😶‍🌫️ Still confused (◞‸◟ )
