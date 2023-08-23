@@ -1,0 +1,31 @@
+---
+import { SITE } from "@config";
+import type { ProjectItem } from "@types";
+import Project from "@components/Project";
+import Layout from "./Layout.astro";
+
+export interface Props {
+  frontmatter: {
+    projects: Record<string, ProjectItem[]>;
+  };
+}
+
+const { projects } = Astro.props.frontmatter;
+---
+
+<Layout title={`Projects - ${SITE.title}`} activePage="projects">
+  <h1>Projects</h1>
+  <slot />
+  {
+    Object.keys(projects).map((key) => (
+      <>
+        <h3>{key}</h3>
+        <div grid="~ cols-1 sm:cols-2 gap-2" py-2>
+          {projects[key].map((project) => (
+            <Project client:load project={project} />
+          ))}
+        </div>
+      </>
+    ))
+  }
+</Layout>

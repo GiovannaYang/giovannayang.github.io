@@ -1,0 +1,198 @@
+---
+import { slugify } from "@renovamen/utils";
+import type { CollectionEntry } from "astro:content";
+import { SITE, THEME } from "@config";
+import Layout from "@layouts/Layout.astro";
+import TocButtons from "@components/TocButtons";
+import Giscus from "@components/Giscus";
+import {
+  getPostDate,
+  getPosts,
+  getSortedPosts,
+  formatDate,
+  readingTime,
+  lastUpdated
+} from "@utils";
+
+export interface Props {
+  post: CollectionEntry<"blog">;
+  lang: string;
+}
+
+const { post, lang } = Astro.props;
+const { title, author, tags } = post.data;
+
+const { Content } = await post.render();
+const tagURL = `/posts/${lang === "en" ? "" : lang + "/"}tags/`;
+
+// does this post has table of contents enabled?
+const hasToc = /## toc\n/.test(post.body);
+
+// previous and next post
+const posts = getSortedPosts(await getPosts(lang));
+const postIndex = posts.findIndex((p) => p.id === post.id);
+
+const nextPost =
+  postIndex === 0
+    ? null
+    : {
+        title: posts[postIndex - 1].data.title,
+        path: posts[postIndex - 1].slug
+      };
+const prevPost =
+  postIndex === posts.length - 1
+    ? null
+    : {
+        title: posts[postIndex + 1].data.title,
+        path: posts[postIndex + 1].slug
+      };
+
+// edit link
+const editURL = THEME.editLink.pattern.replace(/:path/g, `/${post.id}`);
+const editText = THEME.editLink.text;
+
+// last updated time
+const lastUpdatedTime = lastUpdated(post.id);
+const lastUpdatedText = THEME.lastUpdatedText;
+---
+
+<Layout
+  class="post"
+  title={`${title} - ${SITE.title}`}
+  author={author}
+  hasToc={hasToc}
+  activePage="posts"
+>
+  <div mt-6 mb-8>
+    <h1 text-4xl font-bold leading-12 my-0>{title}</h1>
+    <p text-c-lighter mt-2>
+      {formatDate(getPostDate(post.id))} · {readingTime(post.body).minutes} min
+      {
+        tags?.length && (
+          <span>
+            ·
+            <span i-uil:tag-alt text-sm />
+            {tags.map((tag, i) => (
+              <span>
+                <a href={tagURL + slugify(tag)} class="!text-c">
+                  {tag}
+                </a>
+                {i !== tags.length - 1 && <span class="-ml-1.5">, </span>}
+              </span>
+            ))}
+          </span>
+        )
+      }
+    </p>
+  </div>
+
+  <div class="content mb-16">
+    {hasToc && <TocButtons client:load prev={prevPost?.path} next={nextPost?.path} />}
+    <Content />
+  </div>
+
+  <div class="grid md:grid-cols-2 text-[0.95em]">
+    <a
+      href={editURL}
+      title="Edit link"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:underline"
+    >
+      <span class="i-tabler:edit w-4.5 h-4.5 align-text-top"></span>
+      {editText}
+    </a>
+    {
+      lastUpdatedTime !== "Invalid Date" && (
+        <span md:text-right text-c-light>
+          <span class="i-ic:round-update w-4.5 h-4.5" />
+          {lastUpdatedText}
+          {lastUpdatedTime}
+        </span>
+      )
+    }
+  </div>
+
+  {
+    (prevPost || nextPost) && (
+      <div class="mt-3 pt-3 text-[0.95em]" grid="~ md:cols-2" border="t c">
+        <span class="prev">
+          {prevPost && (
+            <a href={`/posts/${prevPost.path}`} class="!text-c">
+              {prevPost.title}
+            </a>
+          )}
+        </span>
+        <span class="next text-right">
+          {nextPost && (
+            <a href={`/posts/${nextPost.path}`} class="!text-c">
+              {nextPost.title}
+            </a>
+          )}
+        </span>
+      </div>
+    )
+  }
+
+  <div mt-20>
+    <Giscus client:visible />
+  </div>
+</Layout>
+
+<style scoped>
+  .prev a::before {
+    content: "← ";
+  }
+  .next a::after {
+    content: " →";
+  }
+</style>
+
+<script>
+  import mediumZoom from "medium-zoom";
+
+  const zoom = mediumZoom();
+  zoom.attach(":not(a) > img:not(.no-zoom)");
+
+  // scroll to anchor smoothly
+  const navigate = () => {
+    if (location.hash) {
+      document
+        .querySelector(decodeURIComponent(location.hash))
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleAnchors = (event: Event) => {
+    const evt = event as MouseEvent & { target: HTMLElement };
+    const link = evt.target.closest("a");
+
+    if (
+      !evt.defaultPrevented &&
+      link &&
+      evt.button === 0 &&
+      link.target !== "_blank" &&
+      link.rel !== "external" &&
+      !link.download &&
+      !evt.metaKey &&
+      !evt.ctrlKey &&
+      !evt.shiftKey &&
+      !evt.altKey
+    ) {
+      const url = new URL(link.href);
+      if (url.origin !== window.location.origin) return;
+
+      evt.preventDefault();
+      const { pathname, hash } = url;
+      if (hash && (!pathname || pathname === location.pathname)) {
+        window.history.replaceState({}, "", hash);
+        navigate();
+      } else {
+        window.location.href = pathname + hash;
+      }
+    }
+  };
+
+  const content = document.querySelector(".post .content");
+  content?.addEventListener("click", handleAnchors, { passive: false });
+</script>

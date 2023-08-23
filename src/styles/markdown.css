@@ -1,0 +1,195 @@
+.prose p {
+  @apply leading-[1.55];
+}
+
+.prose ul,
+.prose li p {
+  @apply !m-0;
+}
+
+.prose a {
+  @apply no-underline hover:underline text-c-active font-normal;
+}
+
+.prose img,
+.prose video {
+  @apply mx-auto my-2;
+}
+
+.prose figure figcaption {
+  @apply text-sm text-c-light;
+}
+
+.prose hr {
+  border-top: 1px solid #e5e7eb; /* border-c */
+}
+
+html.dark .prose hr {
+  border-top: 1px solid #4b5563; /* border-c */
+}
+
+main:not(.post) a.header-anchor {
+  @apply hidden;
+}
+
+/** Table **/
+
+.prose tr {
+  @apply border-t border-c-dark;
+}
+
+.prose tr:last-child {
+  @apply border-b;
+}
+
+/** KaTeX **/
+
+.prose .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose .katex {
+  font-size: 1.1em;
+}
+
+/** Code blocks **/
+
+html.dark .prose div[class*="language-"] pre[data-theme="light"] {
+  @apply hidden;
+}
+
+html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
+  @apply hidden;
+}
+
+.prose div[class*="language-"] {
+  @apply relative my-2 border border-c-dark pt-6 rounded-md;
+}
+
+.prose div[class*="language-"]::before {
+  @apply content-[""] absolute w-2.5 h-2.5 top-3.5 left-4 rounded-full bg-[#fd5f57];
+  box-shadow: 16px 0 0 0 #febb2f, 32px 0 0 0 #2ec841;
+}
+
+.prose div[class*="language-"] > span.lang {
+  @apply absolute top-2.5 right-3 text-sm opacity-60;
+}
+
+.prose div[class*="language-"] > p {
+  @apply hidden;
+}
+
+.prose div[class*="language-"] pre {
+  @apply leading-6 text-[0.925em] m-0 p-4 !bg-transparent;
+}
+
+.prose div[class*="language-"] pre > code {
+  @apply block w-fit min-w-full;
+}
+
+.prose div[class*="language-"] pre > code > span[data-highlighted-line] {
+  @apply -mx-4 px-4 inline-block;
+  width: calc(100% + 2 * 16px);
+}
+
+.prose
+  div[class*="language-"]
+  pre[data-theme="light"]
+  > code
+  > span[data-highlighted-line] {
+  @apply bg-slate-100;
+}
+
+.prose
+  div[class*="language-"]
+  pre[data-theme="dark"]
+  > code
+  > span[data-highlighted-line] {
+  @apply bg-slate-600;
+}
+
+/** Containers **/
+
+.prose .custom-block {
+  @apply border rounded-md px-4 py-0 my-6;
+}
+
+.prose .custom-block.details {
+  @apply border-c-dark py-4;
+}
+
+.prose .custom-block.details summary {
+  @apply font-normal text-base;
+}
+
+.prose .custom-block.info {
+  @apply border-blue-600 dark:border-sky-400;
+}
+
+.prose .custom-block.info .custom-block-title {
+  @apply text-blue-600 dark:text-sky-400;
+}
+
+.prose .custom-block.tip {
+  @apply border-green-600 dark:border-lime-500;
+}
+
+.prose .custom-block.tip .custom-block-title {
+  @apply text-green-600 dark:text-lime-500;
+}
+
+.prose .custom-block.warning {
+  @apply border-amber-600 dark:border-amber-500;
+}
+
+.prose .custom-block.warning .custom-block-title {
+  @apply text-amber-600 dark:text-amber-500;
+}
+
+.prose .custom-block.danger {
+  @apply border-red-600 dark:border-red-400;
+}
+
+.prose .custom-block.danger .custom-block-title {
+  @apply text-red-600 dark:text-red-400;
+}
+
+.prose .paper-block {
+  @apply flex py-3 space-x-5 lt-sm:space-x-0 border-t border-c-dark;
+}
+
+.prose .paper-block .paper-images {
+  @apply w-1/4 flex-center p-1 rounded lt-sm:hidden;
+}
+
+.prose .paper-block .paper-images:not(.no-image) {
+  @apply bg-white;
+}
+
+.prose .paper-block .paper-images > div {
+  @apply space-y-1;
+}
+
+.prose .paper-block .paper-images > div img {
+  @apply my-0;
+}
+
+.prose .paper-block .paper-details {
+  @apply flex-1;
+}
+
+.prose .paper-block .paper-details p {
+  @apply my-1 leading-snug;
+}
+
+/** Medium Zoom **/
+
+.medium-zoom-overlay {
+  @apply z-100 !bg-c;
+}
+
+.medium-zoom-overlay ~ img {
+  @apply z-101;
+}
