@@ -90,11 +90,13 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 - [Continual Learning: Meta Continual Learning & Task Free Settings](/files/talks/2020-08-continual-learning.pdf), Peking University, 08/2020
 -->
 
-## Awards
+## Awards and Honors
 
-|                                                              |      |
-| ------------------------------------------------------------ | ---- |
-| **二等奖**，第十四届蓝桥杯大赛软件类C/C++程序设计大学A组省赛 | 2023 |
+|                                                                                                                                                               |      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| **Second Prize**, the University Group A C/C++ Programming category of the 14th [Lanqiao Cup](https://www.lanqiao.cn/) Software Competition, Sichuan Province | 2023 |
+| **Second Prize**, Outstanding Student Scholarship from UESTC                                                                                                  | 2022 |
+| **Second Prize**, The 37th [Chinese Physics Olympiad](https://cpho.pku.edu.cn) (CPhO), Fujian Province                                                        | 2020 |
 
 ## Miscellaneous
 
