@@ -12,7 +12,7 @@ projects:
         - i-logos:jwt-icon
         - i-logos:mysql-icon
       repo: QirongY/ManagementSystem
-    - name: Student Management System
+    - name: Student Management System (front-end)
       link: https://github.com/QirongY/ManagementSystem-front
       desc: 大二下学期综合课程设计，基于B/S架构的学生管理系统。(前端)
       icon: i-la:user-cog-solid
