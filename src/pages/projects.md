@@ -12,7 +12,7 @@ projects:
         - i-logos:jwt-icon
         - i-logos:mysql-icon
       repo: QirongY/ManagementSystem
-    - name: Student Management System (front-end)
+    - name: Student Management System
       link: https://github.com/QirongY/ManagementSystem-front
       desc: 大二下学期综合课程设计，基于B/S架构的学生管理系统。(前端)
       icon: i-la:user-cog-solid
@@ -33,8 +33,8 @@ projects:
         - i-logos:sqlite
       repo: QirongY/ManagementSystem-front
   Websites:
-    - name: qirongy.github.io
-      link: https://qirongy.github.io
+    - name: qr-yang.top
+      link: https://qr-yang.top
       desc: My personal websites
       icon: i-solar:planet-linear
       tech:
@@ -42,8 +42,8 @@ projects:
         - i-logos:solidjs-icon
         - i-logos:unocss
       repo: QirongY/qirongy.github.io
-    - name: yqr.netlify.app
-      link: https://yqr.netlify.app
+    - name: blog.qr-yang.top
+      link: https://blog.qr-yang.top
       desc: This is my blog, it is powered by VuePress 2 and themed by Gungnir.
       icon: i-ion:extension-puzzle-outline
       tech:

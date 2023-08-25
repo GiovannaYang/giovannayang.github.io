@@ -11,7 +11,7 @@ socials:
   - icon: i-ri:bilibili-line
     link: https://space.bilibili.com/93878345?spm_id_from=333.337.0.0
   - icon: i-ion:planet-outline
-    link: https://yqr.netlify.app
+    link: https://blog.qr-yang.top
     name: Blog
   - icon: i-ri:game-line
     link: 
@@ -92,15 +92,15 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 ## Awards and Honors
 
-|                                                                                                                                                               |      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| **Second Prize**, the University Group A C/C++ Programming category of the 14th [Lanqiao Cup](https://www.lanqiao.cn/) Software Competition, Sichuan Province | 2023 |
-| **Second Prize**, Outstanding Student Scholarship from UESTC                                                                                                  | 2022 |
-| **Second Prize**, The 37th [Chinese Physics Olympiad](https://cpho.pku.edu.cn) (CPhO), Fujian Province                                                        | 2020 |
+|                                                                                                                                                                 |      |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| **Second Prize**, the University Group A C/C++ Programming category of the 14th _[Lanqiao Cup](https://www.lanqiao.cn/)_ Software Competition, Sichuan Province | 2023 |
+| **Second Prize**, Outstanding Student Scholarship from UESTC                                                                                                    | 2022 |
+| **First Prize**, The 37th _[Chinese Physics Olympiad](https://cpho.pku.edu.cn)_ (CPhO), Fujian Province                                                         | 2020 |
 
 ## Miscellaneous
 
-- 🚀 This [personal website](https://github.com/QirongY/QirongY.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
+- 🚀 This [personal website](https://github.com/QirongY/qirongy.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
 
 - 🕹️ My portfolio/cv is still being improved...
 
