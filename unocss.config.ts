@@ -9,7 +9,7 @@ import {
 } from "unocss";
 
 const DEFAULT_FONTS =
-  "system-ui, -apple-system, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif";
+  "FangSong, system-ui, -apple-system, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif";
 
 export default defineConfig({
   shortcuts: [

@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "https://yqr.netlify.app/",
+  website: "https://qr-yang.top/",
   title: "Qirong Yang",
   desc: "A wizard hiding in the Muggle world.",
   author: "Qirong Yang"
