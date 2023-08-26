@@ -18,7 +18,7 @@ socials:
     name: Portfolio
 ---
 
-Qirong is an undergraduate student at the [School of Computer Science and Engineering](https://scse.uestc.edu.cn), [UESTC](https://www.uestc.edu.cn). She worked hard to improve her algorithm skills while taking professional courses. At the same time, she is interested in front-end.
+Qirong is an undergraduate student at the [School of Computer Science and Engineering](https://scse.uestc.edu.cn), [UESTC](https://www.uestc.edu.cn). She worked hard to improve her algorithm skills while taking professional courses. At the same time, she is interested in frontend.
 
 <!-- [Curriculum Vitae](/files/cv/en.pdf) / yqr533@gmail.com -->
 

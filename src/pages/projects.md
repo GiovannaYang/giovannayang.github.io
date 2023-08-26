@@ -36,7 +36,7 @@ projects:
     - name: qr-yang.top
       link: https://qr-yang.top
       desc: My personal websites
-      icon: i-solar:planet-linear
+      icon: i-ion:extension-puzzle-outline
       tech:
         - i-logos:astro-icon
         - i-logos:solidjs-icon
@@ -45,7 +45,7 @@ projects:
     - name: blog.qr-yang.top
       link: https://blog.qr-yang.top
       desc: This is my blog, it is powered by VuePress 2 and themed by Gungnir.
-      icon: i-ion:extension-puzzle-outline
+      icon: i-solar:planet-linear
       tech:
         - i-logos:vue
         - i-logos:typescript-icon
