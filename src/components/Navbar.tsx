@@ -47,7 +47,7 @@ export const Navbar: Component<{
       </a>
 
       <nav hstack space-x-4>
-        <a class="nav-item font-sans" href="/projects" title="Projects">
+        <a class="nav-item font-bold font-sans" href="/projects" title="Projects">
           <div i-ph:rocket-launch-duotone class="md:hidden" />
           <span
             class={`text-lg lt-md:hidden ${props.activePage === "projects" && "active"}`}
@@ -56,7 +56,7 @@ export const Navbar: Component<{
           </span>
         </a>
 
-        <a class="nav-item font-sans" href="/posts" title="Blog">
+        <a class="nav-item font-bold font-sans" href="/posts" title="Blog">
           <div i-majesticons:pencil-line class="md:hidden" />
           <span
             class={`text-lg lt-md:hidden ${props.activePage === "posts" && "active"}`}
