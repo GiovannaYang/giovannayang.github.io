@@ -34,7 +34,8 @@ export default defineConfig({
   theme: {
     fontFamily: {
       sans: `Computer Modern Sans, ${DEFAULT_FONTS}`,
-      ui: DEFAULT_FONTS
+      ui: DEFAULT_FONTS,
+      sys: `system-ui, ${DEFAULT_FONTS}`
     },
     boxShadow: {
       nav: "0 1px 8px 0 rgba(27, 35, 47, .1)"
