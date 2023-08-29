@@ -7,14 +7,13 @@ socials:
   - icon: "i-ion:mail-outline"
     link: "mailto:yqr533@gmail.com"
   - icon: i-eva:github-outline
-    link: https://github.com/QirongY
+    link: https://github.com/giovanna
   - icon: i-ri:bilibili-line
     link: https://space.bilibili.com/93878345?spm_id_from=333.337.0.0
   - icon: i-ion:planet-outline
-    link: https://blog.qr-yang.top
-    name: Blog
+    link: https://blog.hiyqr.top
   - icon: i-ri:game-line
-    link: 
+    link: https://portfolio.hiyqr.top
     name: Portfolio
 ---
 
@@ -100,7 +99,7 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 ## Miscellaneous
 
-- 🚀 This [personal website](https://github.com/QirongY/qirongy.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
+- 🚀 This [personal website](https://github.com/giovanna/giovanna.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
 
 - 🕹️ My portfolio/cv is still being improved...
 

@@ -2,7 +2,7 @@
 
 This is my personal website, modified from [https://github.com/Renovamen/renovamen.github.io](https://github.com/Renovamen/renovamen.github.io).
 
-Anyway, just have fun: [qr-yang.top](https://qr-yang.top)
+Anyway, just have fun: [hiyqr.top](https://hiyqr.top)
 
 &nbsp;
 
