@@ -7,7 +7,7 @@ socials:
   - icon: "i-ion:mail-outline"
     link: "mailto:yqr533@gmail.com"
   - icon: i-eva:github-outline
-    link: https://github.com/giovanna
+    link: https://github.com/giovannayang
   - icon: i-ri:bilibili-line
     link: https://space.bilibili.com/93878345?spm_id_from=333.337.0.0
   - icon: i-ion:planet-outline
@@ -93,13 +93,13 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 |                                                                                                                                                                 |      |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| **Second Prize**, the University Group A C/C++ Programming category of the 14th _[Lanqiao Cup](https://www.lanqiao.cn/)_ Software Competition, Sichuan Province | 2023 |
+| **Second Prize**, the University Group A C/C++ Programming category of the 14th _[Lanqiao Cup](https://www.lanqiao.cn/)_ Software Competition, Sichuan Division | 2023 |
 | **Second Prize**, Outstanding Student Scholarship from UESTC                                                                                                    | 2022 |
-| **First Prize**, The 37th _[Chinese Physics Olympiad](https://cpho.pku.edu.cn)_ (CPhO), Fujian Province                                                         | 2020 |
+| **First Prize**, The 37th _[Chinese Physics Olympiad](https://cpho.pku.edu.cn)_ (CPhO), Fujian Division                                                         | 2020 |
 
 ## Miscellaneous
 
-- 🚀 This [personal website](https://github.com/giovanna/giovanna.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
+- 🚀 This [personal website](https://github.com/giovannayang/giovannayang.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
 
 - 🕹️ My portfolio/cv is still being improved...
 

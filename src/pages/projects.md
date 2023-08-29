@@ -3,7 +3,7 @@ layout: ../layouts/Projects.astro
 projects:
   Sophomore:
     - name: Student Management System
-      link: https://github.com/giovanna/ManagementSystem
+      link: https://github.com/giovannayang/ManagementSystem
       desc: 大二下学期综合课程设计，基于B/S架构的学生管理系统。
       icon: i-la:user-cog-solid
       tech:
@@ -11,9 +11,9 @@ projects:
         - i-logos:gin
         - i-logos:jwt-icon
         - i-logos:mysql-icon
-      repo: giovanna/ManagementSystem
+      repo: giovannayang/ManagementSystem
     - name: Student Management System
-      link: https://github.com/giovanna/ManagementSystem-front
+      link: https://github.com/giovannayang/ManagementSystem-front
       desc: 大二下学期综合课程设计，基于B/S架构的学生管理系统。(前端)
       icon: i-la:user-cog-solid
       tech:
@@ -21,9 +21,9 @@ projects:
         - i-logos:typescript-icon
         - i-logos:ant-design
         - i-logos:axios
-      repo: giovanna/ManagementSystem-front
+      repo: giovannayang/ManagementSystem-front
     - name: VolunteerApp
-      link: https://github.com/giovanna/VolunteerApp
+      link: https://github.com/giovannayang/VolunteerApp
       desc: 2023夏季实习项目，一个与志愿服务相关的Android应用程序。
       icon: i-la:hands-helping-solid
       tech:
@@ -31,7 +31,7 @@ projects:
         - i-logos:android-icon
         - i-logos:google-maps
         - i-logos:sqlite
-      repo: giovanna/ManagementSystem-front
+      repo: giovannayang/ManagementSystem-front
   Websites:
     - name: hiyqr.top
       link: https://hiyqr.top
@@ -41,7 +41,7 @@ projects:
         - i-logos:astro-icon
         - i-logos:solidjs-icon
         - i-logos:unocss
-      repo: giovanna/giovanna.github.io
+      repo: giovannayang/giovannayang.github.io
     - name: blog.hiyqr.top
       link: https://blog.hiyqr.top
       desc: This is my blog, it is powered by VuePress 2 and themed by Gungnir.
@@ -49,7 +49,7 @@ projects:
       tech:
         - i-logos:vue
         - i-logos:typescript-icon
-      repo: giovanna/blog
+      repo: giovannayang/blog
 ---
 
 I'm trying to become a qualified programmer and researcher.
