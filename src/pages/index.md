@@ -5,7 +5,7 @@ subname: 杨骐榕
 avatar: img/avatar.jpg
 socials:
   - icon: "i-ion:mail-outline"
-    link: "mailto:yqr533@gmail.com"
+    link: "mailto:giovannayqr@gmail.com"
   - icon: i-eva:github-outline
     link: https://github.com/giovannayang
   - icon: i-ri:bilibili-line

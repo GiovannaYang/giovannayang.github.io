@@ -8,14 +8,14 @@ export const SITE = {
 export const THEME = {
   editLink: {
     pattern:
-      "https://github.com/giovanna/giovanna.github.io/edit/main/src/content/blog:path",
+      "https://github.com/giovannayang/giovannayang.github.io/edit/main/src/content/blog:path",
     text: "Edit this page on GitHub"
   },
   lastUpdatedText: "Last updated:"
 };
 
 export const GISCUS = {
-  repo: "giovanna/comments",
+  repo: "giovannayang/comments",
   repoId: "R_kgDOJ12dzw",
   category: "Announcements",
   categoryId: "DIC_kwDOJ12dz84CXkh1",
