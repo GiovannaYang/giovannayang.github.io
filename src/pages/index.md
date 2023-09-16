@@ -12,9 +12,8 @@ socials:
     link: https://space.bilibili.com/93878345?spm_id_from=333.337.0.0
   - icon: i-ion:planet-outline
     link: https://blog.hiyqr.top
-  - icon: i-ri:game-line
-    link: https://portfolio.hiyqr.top
-    name: Portfolio
+  - icon: i-ph:book
+    link: https://note.hiyqr.top
 ---
 
 Qirong is an undergraduate student at the [School of Computer Science and Engineering](https://scse.uestc.edu.cn), [UESTC](https://www.uestc.edu.cn). She worked hard to improve her algorithm skills while taking professional courses. At the same time, she is interested in frontend.
@@ -24,9 +23,9 @@ Qirong is an undergraduate student at the [School of Computer Science and Engine
 
 ## Education
 
-|                                                                                         |           |
-| --------------------------------------------------------------------------------------- | --------- |
-| Major in **Computer Science**, University of Electronic Science and Technology of China | 2021-2023 |
+|                                                                                          |           |
+| ---------------------------------------------------------------------------------------- | --------- |
+| **B.Eng. in Computer Science**, University of Electronic Science and Technology of China | 2021-2025 |
 
 <!-- 
 ## Publications <span text-base>(also see <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
@@ -101,7 +100,7 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 - 🚀 This [personal website](https://github.com/giovannayang/giovannayang.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
 
-- 🕹️ My portfolio/cv is still being improved...
+- 🕹️ Here are my blog [blog.hiyqr.top](https://blog.hiyqr.top) and my notebook [note.hiyqr.top](https://note.hiyqr.top)
 
 - 🔭 Ex-PhOer
 

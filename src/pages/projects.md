@@ -20,7 +20,7 @@ projects:
         - i-logos:vue
         - i-logos:typescript-icon
         - i-logos:ant-design
-        - i-logos:axios
+        - i-simple-icons:axios
       repo: giovannayang/ManagementSystem-front
     - name: VolunteerApp
       link: https://github.com/giovannayang/VolunteerApp
@@ -30,7 +30,7 @@ projects:
         - i-logos:java
         - i-logos:android-icon
         - i-logos:google-maps
-        - i-logos:sqlite
+        - i-devicon:sqlite
       repo: giovannayang/ManagementSystem-front
   Websites:
     - name: hiyqr.top
@@ -41,15 +41,20 @@ projects:
         - i-logos:astro-icon
         - i-logos:solidjs-icon
         - i-logos:unocss
-      repo: giovannayang/giovannayang.github.io
     - name: blog.hiyqr.top
       link: https://blog.hiyqr.top
-      desc: This is my blog, it is powered by VuePress 2 and themed by Gungnir.
+      desc: This is my blog, it is powered by VuePress 2.
       icon: i-solar:planet-linear
       tech:
         - i-logos:vue
         - i-logos:typescript-icon
-      repo: giovannayang/blog
+    - name: note.hiyqr.top
+      link: https://note.hiyqr.top
+      desc: This is my notebook, it is powered by VuePress 2.
+      icon: i-ph:book
+      tech:
+        - i-logos:vue
+        - i-logos:typescript-icon
 ---
 
 I'm trying to become a qualified programmer and researcher.
