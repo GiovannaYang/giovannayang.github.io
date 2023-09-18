@@ -48,6 +48,7 @@ projects:
       tech:
         - i-logos:vue
         - i-logos:typescript-icon
+        - i-vscode-icons:file-type-scss
     - name: note.hiyqr.top
       link: https://note.hiyqr.top
       desc: This is my notebook, it is powered by VuePress 2.
@@ -55,6 +56,7 @@ projects:
       tech:
         - i-logos:vue
         - i-logos:typescript-icon
+        - i-vscode-icons:file-type-scss
 ---
 
 I'm trying to become a qualified programmer and researcher.
