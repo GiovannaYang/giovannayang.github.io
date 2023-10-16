@@ -93,6 +93,7 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 |                                                                                                                                                                 |      |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 | **Second Prize**, the University Group A C/C++ Programming category of the 14th _[Lanqiao Cup](https://www.lanqiao.cn/)_ Software Competition, Sichuan Division | 2023 |
+| **First Prize**, Outstanding Student Scholarship from UESTC                                               | 2023 |
 | **Second Prize**, Outstanding Student Scholarship from UESTC                                                                                                    | 2022 |
 | **First Prize**, The 37th _[Chinese Physics Olympiad](https://cpho.pku.edu.cn)_ (CPhO), Fujian Division                                                         | 2020 |
 
