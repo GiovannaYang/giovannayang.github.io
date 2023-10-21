@@ -77,9 +77,9 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 ## Experience
 
-|                                                                                                                                                                                                                                        |         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| **Android Development Intern** <br/>_[Hwadee](https://www.hwadee.cn)_, Chengdu, China <br/>Developed a volunteering-related application using Java and Android Studio.<br/>[repository](https://github.com/giovannayang/volunteerapp/) | 07/2023 |
+|                                                                                                                                                                        |         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| **Android Development Intern** <br/>_[Hwadee](https://www.hwadee.cn)_, Chengdu, China <br/>Developed a volunteering-related application using Java and Android Studio. | 07/2023 |
 
 <!--
 ## Talks
