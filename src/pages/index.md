@@ -77,9 +77,9 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 ## Experience
 
-|                                                                            |         |
-| -------------------------------------------------------------------------- | ------- |
-| **Android Development**, _[Hwadee](https://www.hwadee.cn)_, Chengdu, China | 07/2023 |
+|                                                                                                                                                                                                                                        |         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| **Android Development Intern** <br/>_[Hwadee](https://www.hwadee.cn)_, Chengdu, China <br/>Developed a volunteering-related application using Java and Android Studio.<br/>[repository](https://github.com/giovannayang/volunteerapp/) | 07/2023 |
 
 <!--
 ## Talks
@@ -90,12 +90,12 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 ## Awards and Honors
 
-|                                                                                                                                                                 |      |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| **Second Prize**, the University Group A C/C++ Programming category of the 14th _[Lanqiao Cup](https://www.lanqiao.cn/)_ Software Competition, Sichuan Division | 2023 |
-| **First Prize**, Outstanding Student Scholarship from UESTC                                               | 2023 |
-| **Second Prize**, Outstanding Student Scholarship from UESTC                                                                                                    | 2022 |
-| **First Prize**, The 37th _[Chinese Physics Olympiad](https://cpho.pku.edu.cn)_ (CPhO), Fujian Division                                                         | 2020 |
+|                                                                                                                                                                 |         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| **Second Prize**, the University Group A C/C++ Programming category of the 14th _[Lanqiao Cup](https://www.lanqiao.cn/)_ Software Competition, Sichuan Division | 04/2023 |
+| **First Prize**, Outstanding Student Scholarship from UESTC                                                                                                     | 10/2023 |
+| **Second Prize**, Outstanding Student Scholarship from UESTC                                                                                                    | 10/2022 |
+| **First Prize**, The 37th _[Chinese Physics Olympiad](https://cpho.pku.edu.cn)_ (CPhO), Fujian Division                                                         | 09/2020 |
 
 ## Miscellaneous
 
@@ -110,3 +110,5 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 - 💯 My dream: `while(sleeping){GPA++;}`
 
 - 😶‍🌫️ Still confused (◞‸◟ )
+
+- 🤔 为什么用英文？可以用好看的字体！

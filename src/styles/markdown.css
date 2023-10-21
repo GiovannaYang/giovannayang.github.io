@@ -21,11 +21,13 @@
 }
 
 .prose hr {
-  border-top: 1px solid #e5e7eb; /* border-c */
+  border-top: 1px solid #e5e7eb;
+  /* border-c */
 }
 
 html.dark .prose hr {
-  border-top: 1px solid #4b5563; /* border-c */
+  border-top: 1px solid #4b5563;
+  /* border-c */
 }
 
 main:not(.post) a.header-anchor {
@@ -73,11 +75,11 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
   box-shadow: 16px 0 0 0 #febb2f, 32px 0 0 0 #2ec841;
 }
 
-.prose div[class*="language-"] > span.lang {
+.prose div[class*="language-"]>span.lang {
   @apply absolute top-2.5 right-3 text-sm opacity-60;
 }
 
-.prose div[class*="language-"] > p {
+.prose div[class*="language-"]>p {
   @apply hidden;
 }
 
@@ -85,28 +87,20 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
   @apply leading-6 text-[0.925em] m-0 p-4 !bg-transparent;
 }
 
-.prose div[class*="language-"] pre > code {
+.prose div[class*="language-"] pre>code {
   @apply block w-fit min-w-full;
 }
 
-.prose div[class*="language-"] pre > code > span[data-highlighted-line] {
+.prose div[class*="language-"] pre>code>span[data-highlighted-line] {
   @apply -mx-4 px-4 inline-block;
   width: calc(100% + 2 * 16px);
 }
 
-.prose
-  div[class*="language-"]
-  pre[data-theme="light"]
-  > code
-  > span[data-highlighted-line] {
+.prose div[class*="language-"] pre[data-theme="light"]>code>span[data-highlighted-line] {
   @apply bg-slate-100;
 }
 
-.prose
-  div[class*="language-"]
-  pre[data-theme="dark"]
-  > code
-  > span[data-highlighted-line] {
+.prose div[class*="language-"] pre[data-theme="dark"]>code>span[data-highlighted-line] {
   @apply bg-slate-600;
 }
 
@@ -168,11 +162,11 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
   @apply bg-white;
 }
 
-.prose .paper-block .paper-images > div {
+.prose .paper-block .paper-images>div {
   @apply space-y-1;
 }
 
-.prose .paper-block .paper-images > div img {
+.prose .paper-block .paper-images>div img {
   @apply my-0;
 }
 
@@ -190,6 +184,6 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
   @apply z-100 !bg-c;
 }
 
-.medium-zoom-overlay ~ img {
+.medium-zoom-overlay~img {
   @apply z-101;
 }
