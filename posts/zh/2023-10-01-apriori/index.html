@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="/favicon.png" type="image/png"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="canonical" href="https://hiyqr.top/posts/zh/2023-10-01-apriori/"><meta name="generator" content="Astro v3.3.0"><meta name="msapplication-TileColor" content="#ffffff"><title>Apriori算法 - Qirong Yang</title><!-- General Meta Tags --><meta name="title" content="Apriori算法 - Qirong Yang"><meta name="description" content="A wizard hiding in the Muggle world."><meta name="author" content="Qirong Yang"><!-- Open Graph / Facebook --><meta property="og:title" content="Apriori算法 - Qirong Yang"><meta property="og:description" content="A wizard hiding in the Muggle world."><meta property="og:url" content="https://hiyqr.top/posts/zh/2023-10-01-apriori/"><!-- Twitter --><meta property="twitter:title" content="Apriori算法 - Qirong Yang"><meta property="twitter:description" content="A wizard hiding in the Muggle world."><meta property="twitter:url" content="https://hiyqr.top/posts/zh/2023-10-01-apriori/"><link rel="stylesheet" href="/_astro/index.1d76ace7.css" />
+<link rel="stylesheet" href="/_astro/index.860e3f05.css" />
+<style>.prev[data-astro-cid-gvpn4u4b] a[data-astro-cid-gvpn4u4b]:before{content:"← "}.next[data-astro-cid-gvpn4u4b] a[data-astro-cid-gvpn4u4b]:after{content:" →"}
+</style><script type="module" src="/_astro/hoisted.aef143c1.js"></script></head><body class="font-sans"><main class="post flex flex-col min-h-full text-c px-4 pt-24 pb-4 md:pb-6"><style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var b=Object.defineProperty;var f=(c,o,i)=>o in c?b(c,o,{enumerable:!0,configurable:!0,writable:!0,value:i}):c[o]=i;var l=(c,o,i)=>(f(c,typeof o!="symbol"?o+"":o,i),i);var p;{let c={0:t=>m(t),1:t=>i(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(i(t)),5:t=>new Set(i(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},o=t=>{let[e,r]=t;return e in c?c[e](r):void 0},i=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,r])=>[e,o(r)]));customElements.get("astro-island")||customElements.define("astro-island",(p=class extends HTMLElement{constructor(){super(...arguments);l(this,"Component");l(this,"hydrator");l(this,"hydrate",async()=>{var d;if(!this.hydrator||!this.isConnected)return;let e=(d=this.parentElement)==null?void 0:d.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let r=this.querySelectorAll("astro-slot"),a={},h=this.querySelectorAll("template[data-astro-template]");for(let n of h){let s=n.closest(this.tagName);s!=null&&s.isSameNode(this)&&(a[n.getAttribute("data-astro-template")||"default"]=n.innerHTML,n.remove())}for(let n of r){let s=n.closest(this.tagName);s!=null&&s.isSameNode(this)&&(a[n.getAttribute("name")||"default"]=n.innerHTML)}let u;try{u=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(n){let s=this.getAttribute("component-url")||"<unknown>",y=this.getAttribute("component-export");throw y&&(s+=` (export ${y})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),n),n}await this.hydrator(this)(this.Component,u,a,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});l(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),r.disconnect(),this.childrenConnectedCallback()},r=new MutationObserver(()=>{var a;((a=this.lastChild)==null?void 0:a.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});r.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),r=this.getAttribute("client");if(Astro[r]===void 0){window.addEventListener(`astro:${r}`,()=>this.start(),{once:!0});return}Astro[r](async()=>{let a=this.getAttribute("renderer-url"),[h,{default:u}]=await Promise.all([import(this.getAttribute("component-url")),a?import(a):()=>()=>{}]),d=this.getAttribute("component-export")||"default";if(!d.includes("."))this.Component=h[d];else{this.Component=h;for(let n of d.split("."))this.Component=this.Component[n]}return this.hydrator=u,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},l(p,"observedAttributes",["props"]),p))}})();</script><astro-island uid="2gtWIX" data-solid-render-id="s1" component-url="/_astro/Navbar.d66ea635.js" component-export="default" renderer-url="/_astro/client.5a17342c.js" props="{&quot;activePage&quot;:[0,&quot;posts&quot;],&quot;hasToc&quot;:[0,false]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Navbar&quot;,&quot;value&quot;:true}" await-children=""><header data-hk="s10-0" class="z-30 w-full h-14 hstack justify-between bg-c font-ui px-4 md:px-5 false false absolute top-0 left-0"><a font-bold text="c-light hover:c-dark" href="/"><span text-lg>hi@yqr</span><div i-fa6-solid:angle-right class="prompt inline-block"></div><span class="blink">_</span></a><nav hstack space-x-4><a nav-item href="/projects" title="Projects"><div i-ph:rocket-launch-duotone class="md:hidden"></div><span class="lt-md:hidden false">Projects</span></a><a nav-item href="/posts" title="Blog"><div i-majesticons:pencil-line class="md:hidden"></div><span class="lt-md:hidden active">Blog</span></a><a nav-item href="/search" title="Search"><span i-uil:search></span></a><button nav-item title="Toggle dark"><div i="carbon-sun dark:carbon-moon"></div></button><!--$--><!--/--></nav></header><!--astro:end--></astro-island><div class="flex-1 mb-6"><div class="prose prose-lg mx-auto"><div mt-6 mb-8 data-astro-cid-gvpn4u4b><h1 text-4xl font-bold leading-12 my-0 data-astro-cid-gvpn4u4b>Apriori算法</h1><p text-c-lighter mt-2 data-astro-cid-gvpn4u4b>Oct 1, 2023 · 5 min
+<span data-astro-cid-gvpn4u4b>
+·
+<span i-uil:tag-alt text-sm mr-1 data-astro-cid-gvpn4u4b></span><span data-astro-cid-gvpn4u4b><a href="/posts/zh/tags/data-mining" class="!text-c" data-astro-cid-gvpn4u4b>data mining</a></span></span></p></div><div class="content mb-16" data-astro-cid-gvpn4u4b><h2 id="一概述"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#一概述">#</a>一、概述</h2>
+<h4 id="性质"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#性质">#</a>性质</h4>
+<p>如果一个项集是频繁的，则它的所有子集一定也是频繁的。</p>
+<p>相反，如果一个项集是非频繁的，则它的所有超集也一定是非频繁的。</p>
+<hr>
+<ul>
+<li>
+<p>这种基于支持度度量修剪指数搜索空间的策略称为基于支持度的剪枝(support-based pruning)</p>
+</li>
+<li>
+<p>这种剪枝策略依赖于支持度度量的一个关键性质，即一个项集的支持度决不会超过它的子集的支持度。这个性质也称为支持度度量的反单调性(anti-monotone)</p>
+</li>
+</ul>
+<hr>
+<h4 id="apriori剪枝规则"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#apriori剪枝规则">#</a>Apriori剪枝规则</h4>
+<p>如果一个项集不是频繁的，将不产生/测试它的超集!</p>
+<h4 id="方法"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#方法">#</a>方法</h4>
+<p>由长度为k的频繁项集产生长度为(k+1)的候选项集(连接，剪枝)，并且根据DB测试这些候选。</p>
+<p><img src="/img/posts/zh/2023-10-01/030301.png" alt=""></p>
+<h2 id="二算法执行过程举例"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#二算法执行过程举例">#</a>二、算法执行过程举例</h2>
+<p><img src="/img/posts/zh/2023-10-01/030302.png" alt=""></p>
+<p>每次扫描：</p>
+<ol>
+<li>计算支持度</li>
+<li>去掉非频繁项</li>
+<li>连接剪枝</li>
+</ol>
+<h2 id="三apriori算法描述"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#三apriori算法描述">#</a>三、Apriori算法描述</h2>
+<h4 id="主体"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#主体">#</a>主体</h4>
+<p><img src="/img/posts/zh/2023-10-01/030303.png" alt=""></p>
+<h4 id="_1-连接步"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_1-连接步">#</a>1. 连接步</h4>
+<p><img src="/img/posts/zh/2023-10-01/030304.png" alt=""></p>
+<h4 id="_2-剪枝步"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_2-剪枝步">#</a>2. 剪枝步</h4>
+<p><img src="/img/posts/zh/2023-10-01/030305.png" alt=""></p>
+<h2 id="四apriori的重要细节"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#四apriori的重要细节">#</a>四、Apriori的重要细节</h2>
+<h4 id="如何产生候选"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#如何产生候选">#</a>如何产生候选？</h4>
+<p>步骤1：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">L_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的自连接</p>
+<p>步骤2：剪枝</p>
+<h4 id="候选产生的例子"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#候选产生的例子">#</a>候选产生的例子</h4>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mn>3</mn></msub><mo>=</mo><mo stretchy="false">{</mo><mi>a</mi><mi>b</mi><mi>c</mi><mo separator="true">,</mo><mi>a</mi><mi>b</mi><mi>d</mi><mo separator="true">,</mo><mi>a</mi><mi>c</mi><mi>d</mi><mo separator="true">,</mo><mi>a</mi><mi>c</mi><mi>e</mi><mo separator="true">,</mo><mi>b</mi><mi>c</mi><mi>d</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">L_3=\{abc,abd,acd,ace,bcd\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal">ab</span><span class="mord mathnormal">c</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ab</span><span class="mord mathnormal">d</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">d</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">ce</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mord mathnormal">c</span><span class="mord mathnormal">d</span><span class="mclose">}</span></span></span></span></p>
+<ul>
+<li>
+<p>自连接</p>
+<ul>
+<li>abcd、abcd、abce、abcd</li>
+<li>abdc、abcd、x、abcd</li>
+<li>abcd、acbd、acde、abcd</li>
+<li>abce、x、aced、x</li>
+<li>abcd、abcd、bacd、x</li>
+</ul>
+</li>
+<li>
+<p>剪枝</p>
+<ul>
+<li>abcd：abc、abd、acd、bcd</li>
+<li>abce：abc、abe、ace、bce，无abe、bce删除</li>
+<li>abdc：abd、abc、adc、bdc，无adc、bdc删除</li>
+<li>acbd：acb、acd、abd、cbd，无acb、cbd删除</li>
+<li>acde：acd、ace、ade、cde，无ade、cde删除</li>
+<li>aced：ace、acd、aed、ced，无aed、ced删除</li>
+<li>bacd：bac、bad、bcd、acd，无bac、bad删除</li>
+</ul>
+</li>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>4</mn></msub><mo>=</mo><mo stretchy="false">{</mo><mi>a</mi><mi>b</mi><mi>c</mi><mi>d</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">C_4=\{abcd\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal">ab</span><span class="mord mathnormal">c</span><span class="mord mathnormal">d</span><span class="mclose">}</span></span></span></span></p>
+</li>
+</ul>
+<h2 id="五例子"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#五例子">#</a>五、例子</h2>
+<p><img src="/img/posts/zh/2023-10-01/030306.png" alt=""></p>
+<p><img src="/img/posts/zh/2023-10-01/030307.png" alt=""></p>
+<h2 id="六频繁项集到规则产生"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#六频繁项集到规则产生">#</a>六、频繁项集到规则产生</h2>
+<p>怎样有效的从频繁项集中产生关联规则?</p>
+<p>关联规则的提取：将一个项集Y划分成两个非空的子集X和Y-X，使得X→Y-X满足置信度阈值。</p>
+<p>如果{A,B,C,D}是频繁项集,候选项集为：</p>
+<p>ABC→D，ABD→C，ACD→B，BCD→A</p>
+<p>A→BCD，B→ACD，C→ABD，D→ABC</p>
+<p>AB→CD，AC→BD，AD→BC，BC→AD，BD→AC，CD→AB</p>
+<p>一般，计算关联规则的置信度并不需要再次扫描事务数据集。规则{A,B,C}→{D}的置信度为support(ABCD)/support(ABC)。</p>
+<h2 id="七计算复杂性"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#七计算复杂性">#</a>七、计算复杂性</h2>
+<h3 id="支持度阈值"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#支持度阈值">#</a>支持度阈值</h3>
+<ul>
+<li>
+<p>降低支持度阈值通常将导致更多的项集是频繁的。计算复杂度增加</p>
+</li>
+<li>
+<p>随着支持度阈值的降低，频繁项集的最大长度将增加，导致算法需要扫描数据集的次数也将增多</p>
+</li>
+</ul>
+<h3 id="项数"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#项数">#</a>项数</h3>
+<p>随着项数的增加，需要更多的空间来存储项的支持度计数。如果频繁项集的数目也随着数据项数增加而增长，则由于算法产生的候选项集更多，计算量和I/O开销将增加</p>
+<h3 id="事务数"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#事务数">#</a>事务数</h3>
+<p>由于Apriori算法反复扫描数据集，因此它的运行时间随着事务数增加而增加</p>
+<h2 id="八频繁模式挖掘的挑战"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#八频繁模式挖掘的挑战">#</a>八、频繁模式挖掘的挑战</h2>
+<h4 id="挑战"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#挑战">#</a>挑战</h4>
+<ul>
+<li>
+<p>事务数据库的多遍扫描</p>
+</li>
+<li>
+<p>数量巨大的候选</p>
+</li>
+<li>
+<p>候选支持度计数繁重的工作量</p>
+</li>
+</ul>
+<h4 id="改进-apriori-基本思想"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#改进-apriori-基本思想">#</a>改进 Apriori: 基本思想</h4>
+<ul>
+<li>
+<p>减少事务数据库的扫描遍数</p>
+</li>
+<li>
+<p>压缩候选数量</p>
+</li>
+<li>
+<p>便于候选计数</p>
+</li>
+</ul>
+<h2 id="九提高apriori算法的方法"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#九提高apriori算法的方法">#</a>九、提高Apriori算法的方法</h2>
+<h3 id="hash-based-itemset-counting散列项集计数"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#hash-based-itemset-counting散列项集计数">#</a>Hash-based itemset counting(散列项集计数)</h3>
+<p>基本思想：压缩候选k项集</p>
+<p><img src="/img/posts/zh/2023-10-01/030308.png" alt=""></p>
+<h3 id="transaction-reduction事务压缩"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#transaction-reduction事务压缩">#</a>Transaction reduction(事务压缩)</h3>
+<p>基本思想：删除不可能对寻找频繁项集有用的事务(对象)</p>
+<p>不包含任何频繁k项集的事务不可能包含任何频k+1项集。</p>
+<p>因此这些事务在其后的考虑中，可以加上标记或删除。</p>
+<h3 id="partitioning划分"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#partitioning划分">#</a>Partitioning(划分)</h3>
+<p>基本思想：分而治之</p>
+<p>原理：项集在DB中是频繁的，它必须至少在DB的一个划分中是频繁的</p>
+<p>– 扫描 1：划分数据库，并找出局部频繁模式local freque nt itemset
+– 扫描 2：求出全局频繁模式</p>
+<p><img src="/img/posts/zh/2023-10-01/030309.png" alt=""></p>
+<h3 id="sampling采样"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#sampling采样">#</a>Sampling(采样)</h3>
+<p>基本思想：选取原数据库的一个样本，使用Apriori算法在样本中挖掘频繁模式</p>
+<ul>
+<li>扫描一次数据库，验证在样本中发现的频繁模式</li>
+<li>再次扫描数据库，找出遗漏的频繁模式(可选)</li>
+</ul>
+<p>牺牲一些精度换取有效性。</p></div><div class="grid md:grid-cols-2 text-[0.95em]" data-astro-cid-gvpn4u4b><a href="https://github.com/giovannayang/giovannayang.github.io/edit/main/src/content/blog/zh/2023-10-01-Apriori.md" title="Edit link" target="_blank" rel="noopener noreferrer" class="hover:underline" data-astro-cid-gvpn4u4b><span class="i-tabler:edit w-4.5 h-4.5 align-text-top mr-1" data-astro-cid-gvpn4u4b></span>Edit this page on GitHub</a><span md:text-right text-c-light data-astro-cid-gvpn4u4b><span class="i-ic:round-update w-4.5 h-4.5 mr-1" data-astro-cid-gvpn4u4b></span>Last updated:10/26/2023, 3:15:28 PM</span></div><div class="mt-3 pt-3 text-[0.95em]" grid="~ md:cols-2" border="t c" data-astro-cid-gvpn4u4b><span class="prev" data-astro-cid-gvpn4u4b><a href="/posts/zh/2023-09-24-数据预处理-数据变换" class="!text-c" data-astro-cid-gvpn4u4b>数据预处理-数据变换</a></span><span class="next text-right" data-astro-cid-gvpn4u4b><a href="/posts/zh/2023-10-04-web安全-http" class="!text-c" data-astro-cid-gvpn4u4b>【Web安全】HTTP</a></span></div><div mt-20 data-astro-cid-gvpn4u4b><script>(()=>{var r=(i,c,s)=>{let n=async()=>{await(await i())()},t=new IntersectionObserver(e=>{for(let o of e)if(o.isIntersecting){t.disconnect(),n();break}});for(let e of s.children)t.observe(e)};(self.Astro||(self.Astro={})).visible=r;window.dispatchEvent(new Event("astro:visible"));})();</script><astro-island uid="2cWQyA" data-solid-render-id="s0" component-url="/_astro/Giscus.43ddac78.js" component-export="default" renderer-url="/_astro/client.5a17342c.js" props="{&quot;data-astro-cid-gvpn4u4b&quot;:[0,true]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;Giscus&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s00-0" class="giscus"></div><!--astro:end--></astro-island></div></div></div><footer class="max-w-content w-full hstack justify-between font-sys mx-auto mt-20" text="xs lg:sm" data-astro-cid-sz7xmlte><span text-c-lighter data-astro-cid-sz7xmlte><span data-astro-cid-sz7xmlte>© Qirong Yang 2023</span><span lt-sm:hidden data-astro-cid-sz7xmlte>· A wizard hiding in the Muggle world</span></span><span hstack space-x-3 data-astro-cid-sz7xmlte><a class="footer-item" href="https://github.com/QirongY/portfolio" title="Source code" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte><div i-lucide:code-2 data-astro-cid-sz7xmlte></div><span lt-sm:hidden data-astro-cid-sz7xmlte>Code</span></a><a class="footer-item" href="/rss.xml" title="RSS" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte><div i-heroicons:rss-20-solid data-astro-cid-sz7xmlte></div><span lt-sm:hidden data-astro-cid-sz7xmlte>RSS</span></a><a class="footer-item" href="/sitemap-index.xml" title="Sitemap" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte><div i-bx:map-alt data-astro-cid-sz7xmlte></div><span lt-sm:hidden data-astro-cid-sz7xmlte>Sitemap</span></a></span></footer></main></body></html>

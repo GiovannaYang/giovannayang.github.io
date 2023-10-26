@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="/favicon.png" type="image/png"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="canonical" href="https://hiyqr.top/posts/zh/2023-10-09-fp/"><meta name="generator" content="Astro v3.3.0"><meta name="msapplication-TileColor" content="#ffffff"><title>FP增长算法 - Qirong Yang</title><!-- General Meta Tags --><meta name="title" content="FP增长算法 - Qirong Yang"><meta name="description" content="A wizard hiding in the Muggle world."><meta name="author" content="Qirong Yang"><!-- Open Graph / Facebook --><meta property="og:title" content="FP增长算法 - Qirong Yang"><meta property="og:description" content="A wizard hiding in the Muggle world."><meta property="og:url" content="https://hiyqr.top/posts/zh/2023-10-09-fp/"><!-- Twitter --><meta property="twitter:title" content="FP增长算法 - Qirong Yang"><meta property="twitter:description" content="A wizard hiding in the Muggle world."><meta property="twitter:url" content="https://hiyqr.top/posts/zh/2023-10-09-fp/"><link rel="stylesheet" href="/_astro/index.1d76ace7.css" />
+<link rel="stylesheet" href="/_astro/index.860e3f05.css" />
+<style>.prev[data-astro-cid-gvpn4u4b] a[data-astro-cid-gvpn4u4b]:before{content:"← "}.next[data-astro-cid-gvpn4u4b] a[data-astro-cid-gvpn4u4b]:after{content:" →"}
+</style><script type="module" src="/_astro/hoisted.aef143c1.js"></script></head><body class="font-sans"><main class="post flex flex-col min-h-full text-c px-4 pt-24 pb-4 md:pb-6"><style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var b=Object.defineProperty;var f=(c,o,i)=>o in c?b(c,o,{enumerable:!0,configurable:!0,writable:!0,value:i}):c[o]=i;var l=(c,o,i)=>(f(c,typeof o!="symbol"?o+"":o,i),i);var p;{let c={0:t=>m(t),1:t=>i(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(i(t)),5:t=>new Set(i(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},o=t=>{let[e,r]=t;return e in c?c[e](r):void 0},i=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,r])=>[e,o(r)]));customElements.get("astro-island")||customElements.define("astro-island",(p=class extends HTMLElement{constructor(){super(...arguments);l(this,"Component");l(this,"hydrator");l(this,"hydrate",async()=>{var d;if(!this.hydrator||!this.isConnected)return;let e=(d=this.parentElement)==null?void 0:d.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let r=this.querySelectorAll("astro-slot"),a={},h=this.querySelectorAll("template[data-astro-template]");for(let n of h){let s=n.closest(this.tagName);s!=null&&s.isSameNode(this)&&(a[n.getAttribute("data-astro-template")||"default"]=n.innerHTML,n.remove())}for(let n of r){let s=n.closest(this.tagName);s!=null&&s.isSameNode(this)&&(a[n.getAttribute("name")||"default"]=n.innerHTML)}let u;try{u=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(n){let s=this.getAttribute("component-url")||"<unknown>",y=this.getAttribute("component-export");throw y&&(s+=` (export ${y})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),n),n}await this.hydrator(this)(this.Component,u,a,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});l(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),r.disconnect(),this.childrenConnectedCallback()},r=new MutationObserver(()=>{var a;((a=this.lastChild)==null?void 0:a.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});r.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),r=this.getAttribute("client");if(Astro[r]===void 0){window.addEventListener(`astro:${r}`,()=>this.start(),{once:!0});return}Astro[r](async()=>{let a=this.getAttribute("renderer-url"),[h,{default:u}]=await Promise.all([import(this.getAttribute("component-url")),a?import(a):()=>()=>{}]),d=this.getAttribute("component-export")||"default";if(!d.includes("."))this.Component=h[d];else{this.Component=h;for(let n of d.split("."))this.Component=this.Component[n]}return this.hydrator=u,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},l(p,"observedAttributes",["props"]),p))}})();</script><astro-island uid="2gtWIX" data-solid-render-id="s1" component-url="/_astro/Navbar.d66ea635.js" component-export="default" renderer-url="/_astro/client.5a17342c.js" props="{&quot;activePage&quot;:[0,&quot;posts&quot;],&quot;hasToc&quot;:[0,false]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Navbar&quot;,&quot;value&quot;:true}" await-children=""><header data-hk="s10-0" class="z-30 w-full h-14 hstack justify-between bg-c font-ui px-4 md:px-5 false false absolute top-0 left-0"><a font-bold text="c-light hover:c-dark" href="/"><span text-lg>hi@yqr</span><div i-fa6-solid:angle-right class="prompt inline-block"></div><span class="blink">_</span></a><nav hstack space-x-4><a nav-item href="/projects" title="Projects"><div i-ph:rocket-launch-duotone class="md:hidden"></div><span class="lt-md:hidden false">Projects</span></a><a nav-item href="/posts" title="Blog"><div i-majesticons:pencil-line class="md:hidden"></div><span class="lt-md:hidden active">Blog</span></a><a nav-item href="/search" title="Search"><span i-uil:search></span></a><button nav-item title="Toggle dark"><div i="carbon-sun dark:carbon-moon"></div></button><!--$--><!--/--></nav></header><!--astro:end--></astro-island><div class="flex-1 mb-6"><div class="prose prose-lg mx-auto"><div mt-6 mb-8 data-astro-cid-gvpn4u4b><h1 text-4xl font-bold leading-12 my-0 data-astro-cid-gvpn4u4b>FP增长算法</h1><p text-c-lighter mt-2 data-astro-cid-gvpn4u4b>Oct 9, 2023 · 5 min
+<span data-astro-cid-gvpn4u4b>
+·
+<span i-uil:tag-alt text-sm mr-1 data-astro-cid-gvpn4u4b></span><span data-astro-cid-gvpn4u4b><a href="/posts/zh/tags/data-mining" class="!text-c" data-astro-cid-gvpn4u4b>data mining</a></span></span></p></div><div class="content mb-16" data-astro-cid-gvpn4u4b><p>该算法不同于Apriori算法的“产生-测试”范型。而是使用一种称作FP树的紧凑数据结构组织数据，并直接从该结构中提取频繁项集。</p>
+<h2 id="一基本思想"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#一基本思想">#</a>一、基本思想</h2>
+<p>首先：将代表频繁项集的数据库压缩到FP树上</p>
+<p>其次：将FP树划分为一组条件数据库(每个数据数据库关联一个频繁项或“模式段”)，挖掘每个条件数据库获取频繁项集</p>
+<h2 id="二如何构造fp树"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#二如何构造fp树">#</a>二、如何构造FP树</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>TID</th><th>Items</th></tr></thead><tbody><tr><td>1</td><td>{a,b}</td></tr><tr><td>2</td><td>{b,c,d}</td></tr><tr><td>3</td><td>{a,c,d,e}</td></tr><tr><td>4</td><td>{a,d,e}</td></tr><tr><td>5</td><td>{a,b,c}</td></tr><tr><td>6</td><td>{a,b,c,d}</td></tr><tr><td>7</td><td>{a}</td></tr><tr><td>8</td><td>{a,b,c}</td></tr><tr><td>9</td><td>{a,b,d}</td></tr><tr><td>10</td><td>{b,c,e}</td></tr></tbody></table>
+<p>最小支持度计数 = 2</p>
+<ol>
+<li>支持度排序：扫描一次数据集，确定每个项的支持度计数。</li>
+</ol>
+<p>丢弃非频繁项，而将频繁项按照支持度的递减排序。L = {a:8, b:7, c:6, d:5, e:3}</p>
+<ol start="2">
+<li>构建FP树：第二次扫描数据集，读入第一个事务{a,b}之后，创建标记为a和b的结点。然后形成null->a->b路径。该路径上的所有结点的频度计数为1。</li>
+</ol>
+<p><img src="/img/posts/zh/2023-10-09/030401.png" alt=""></p>
+<p>读入第二个事务{b,c,d}之后，为项b，c和d创建新的结点集。</p>
+<p>然后，连接结点null->b->c->d，形成一条代表该事务的路径。该路径上的每个结点的频度计数也等于1。</p>
+<p>注意：尽管前两个事务具有一个共同项b，但是它们的路径不相交，因为这两个事务没有共同的前缀。</p>
+<p><img src="/img/posts/zh/2023-10-09/030402.png" alt=""></p>
+<p>第三个事务{a,c,d,e}与第一个事务共享一个共同的前缀项a，所以第三个事务的路径null->a->c->d->e与第一个事务的路径null-> a->b部分重叠。因为它们的路径重叠，所以结点a的频度计数增加为2。</p>
+<p><img src="/img/posts/zh/2023-10-09/030403.png" alt=""></p>
+<p>继续该过程，直到每个事务都映射到FP树的一条路径。</p>
+<p><img src="/img/posts/zh/2023-10-09/030404.png" alt=""></p>
+<h4 id="另一个例子"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#另一个例子">#</a>另一个例子</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>TID</th><th>Items</th></tr></thead><tbody><tr><td>1</td><td>I1,I2,I5</td></tr><tr><td>2</td><td>I2,I4</td></tr><tr><td>3</td><td>I2,I3</td></tr><tr><td>4</td><td>I1,I2,I4</td></tr><tr><td>5</td><td>I1,I3</td></tr><tr><td>6</td><td>I2,I3</td></tr><tr><td>7</td><td>I1,I3</td></tr><tr><td>8</td><td>I1,I2,I3,I5</td></tr><tr><td>9</td><td>I1,I2,I3</td></tr></tbody></table>
+<ol>
+<li>支持度计数</li>
+</ol>
+<p>I1:6, I2:7, I3:6, I4:2, I5:2</p>
+<p>排序后：I2,I1,I3,I4,I5</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>TID</th><th>Items</th></tr></thead><tbody><tr><td>1</td><td>I2,I1,I5</td></tr><tr><td>2</td><td>I2,I4</td></tr><tr><td>3</td><td>I2,I3</td></tr><tr><td>4</td><td>I2,I1,I4</td></tr><tr><td>5</td><td>I1,I3</td></tr><tr><td>6</td><td>I2,I3</td></tr><tr><td>7</td><td>I1,I3</td></tr><tr><td>8</td><td>I2,I1,I3,I5</td></tr><tr><td>9</td><td>I2,I1,I3</td></tr></tbody></table>
+<ol start="2">
+<li>读入事务建树</li>
+</ol>
+<p><img src="/img/posts/zh/2023-10-09/030405.png" alt=""></p>
+<h2 id="三fp树特点"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#三fp树特点">#</a>三、FP树特点</h2>
+<ul>
+<li>
+<p>通常，FP树的大小比未压缩的数据小，因为购物篮数据的事务常常共享一些共同项。如果共同项较少，FP树对存储空间的压缩效果将不明显。</p>
+</li>
+<li>
+<p>FP树的大小也依赖于项如何排序。一般按照支持度计数递减序可以导致较小的FP树。</p>
+</li>
+<li>
+<p>FP树还包含一个连接具有相同项的结点的指针列表。这些指针有助于方便快捷地访问树中的项。</p>
+</li>
+</ul>
+<h2 id="四如何在fp树进行频繁模式挖掘"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#四如何在fp树进行频繁模式挖掘">#</a>四、如何在FP树进行频繁模式挖掘</h2>
+<h3 id="_1-构建条件模式基子数据库"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_1-构建条件模式基子数据库">#</a>(1) 构建条件模式基(子数据库)</h3>
+<p>条件模式基：一个“子数据库”，由FP树中与该后缀模式一起出现的前缀路径集组成。</p>
+<p><img src="/img/posts/zh/2023-10-09/030406.png" alt=""></p>
+<h3 id="_2-构建条件fp树"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_2-构建条件fp树">#</a>(2) 构建条件FP树</h3>
+<p>将条件模式基看作为事务数据库，构造条件FP树</p>
+<p><img src="/img/posts/zh/2023-10-09/030407.png" alt=""></p>
+<h3 id="_3-挖掘频繁项集"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_3-挖掘频繁项集">#</a>(3) 挖掘频繁项集</h3>
+<p>对每一(条件)树，两种情况</p>
+<ol>
+<li>如果(条件)FP树为单个路径，则产生该路径下所有模式的组合。</li>
+</ol>
+<p><img src="/img/posts/zh/2023-10-09/030408.png" alt=""></p>
+<p>e.g. I5: {I2,I5:2}, {I1,I5:2}, {I2,I1,I5:2}</p>
+<ol>
+<li>如果(条件)FP树为多路径，则针对树的头表中的每一个项，产生对应模式获取频繁模式。</li>
+</ol>
+<p><img src="/img/posts/zh/2023-10-09/030409.png" alt=""></p>
+<ul>
+<li>{I2,I3:4}
+以{I2,I3}构造条件模式基（空）</li>
+<li>{I1,I3:4}
+以{I1,I3}构造条件模式基{I2:2}
+构造条件FP树：<a href="I2:2">I2:2</a></li>
+</ul>
+<h2 id="五算法过程描述"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#五算法过程描述">#</a>五、算法过程描述</h2>
+<p><img src="/img/posts/zh/2023-10-09/030410.png" alt=""></p>
+<p><img src="/img/posts/zh/2023-10-09/030411.png" alt=""></p>
+<h2 id="六优缺点"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#六优缺点">#</a>六、优缺点</h2>
+<p>优点：</p>
+<ul>
+<li>FP增长算法对长和短的模式都是有效且可伸缩的</li>
+<li>效率比Apriori算法快了一个数量级</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>对内存要求较大，算法实现相对复杂</li>
+</ul></div><div class="grid md:grid-cols-2 text-[0.95em]" data-astro-cid-gvpn4u4b><a href="https://github.com/giovannayang/giovannayang.github.io/edit/main/src/content/blog/zh/2023-10-09-FP.md" title="Edit link" target="_blank" rel="noopener noreferrer" class="hover:underline" data-astro-cid-gvpn4u4b><span class="i-tabler:edit w-4.5 h-4.5 align-text-top mr-1" data-astro-cid-gvpn4u4b></span>Edit this page on GitHub</a><span md:text-right text-c-light data-astro-cid-gvpn4u4b><span class="i-ic:round-update w-4.5 h-4.5 mr-1" data-astro-cid-gvpn4u4b></span>Last updated:10/26/2023, 3:15:28 PM</span></div><div class="mt-3 pt-3 text-[0.95em]" grid="~ md:cols-2" border="t c" data-astro-cid-gvpn4u4b><span class="prev" data-astro-cid-gvpn4u4b><a href="/posts/zh/2023-10-08-web安全-encode" class="!text-c" data-astro-cid-gvpn4u4b>【Web安全】encode</a></span><span class="next text-right" data-astro-cid-gvpn4u4b><a href="/posts/zh/2023-10-10-web安全-xss3" class="!text-c" data-astro-cid-gvpn4u4b>【Web安全】xss3</a></span></div><div mt-20 data-astro-cid-gvpn4u4b><script>(()=>{var r=(i,c,s)=>{let n=async()=>{await(await i())()},t=new IntersectionObserver(e=>{for(let o of e)if(o.isIntersecting){t.disconnect(),n();break}});for(let e of s.children)t.observe(e)};(self.Astro||(self.Astro={})).visible=r;window.dispatchEvent(new Event("astro:visible"));})();</script><astro-island uid="2cWQyA" data-solid-render-id="s0" component-url="/_astro/Giscus.43ddac78.js" component-export="default" renderer-url="/_astro/client.5a17342c.js" props="{&quot;data-astro-cid-gvpn4u4b&quot;:[0,true]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;Giscus&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s00-0" class="giscus"></div><!--astro:end--></astro-island></div></div></div><footer class="max-w-content w-full hstack justify-between font-sys mx-auto mt-20" text="xs lg:sm" data-astro-cid-sz7xmlte><span text-c-lighter data-astro-cid-sz7xmlte><span data-astro-cid-sz7xmlte>© Qirong Yang 2023</span><span lt-sm:hidden data-astro-cid-sz7xmlte>· A wizard hiding in the Muggle world</span></span><span hstack space-x-3 data-astro-cid-sz7xmlte><a class="footer-item" href="https://github.com/QirongY/portfolio" title="Source code" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte><div i-lucide:code-2 data-astro-cid-sz7xmlte></div><span lt-sm:hidden data-astro-cid-sz7xmlte>Code</span></a><a class="footer-item" href="/rss.xml" title="RSS" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte><div i-heroicons:rss-20-solid data-astro-cid-sz7xmlte></div><span lt-sm:hidden data-astro-cid-sz7xmlte>RSS</span></a><a class="footer-item" href="/sitemap-index.xml" title="Sitemap" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte><div i-bx:map-alt data-astro-cid-sz7xmlte></div><span lt-sm:hidden data-astro-cid-sz7xmlte>Sitemap</span></a></span></footer></main></body></html>
