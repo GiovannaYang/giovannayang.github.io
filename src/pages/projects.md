@@ -43,7 +43,7 @@ projects:
         - i-logos:unocss
     - name: blog.hiyqr.top
       link: https://blog.hiyqr.top
-      desc: This is my blog, it is powered by VuePress 2.
+      desc: This version of my blog is used to share my life.
       icon: i-solar:planet-linear
       tech:
         - i-logos:vue

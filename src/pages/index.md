@@ -4,13 +4,13 @@ name: Qirong Yang
 subname: 杨骐榕
 avatar: img/avatar.jpg
 socials:
-  - icon: "i-ion:mail-outline"
+  - icon: i-academicons:cv
+    link: /files/cv/cn.pdf
+  - icon: i-ion:mail-outline
     link: "mailto:giovannayqr@gmail.com"
   - icon: i-eva:github-outline
     link: https://github.com/giovannayang
-  - icon: i-ri:bilibili-line
-    link: https://space.bilibili.com/93878345?spm_id_from=333.337.0.0
-  - icon: i-ion:planet-outline
+  - icon: i-ph:planet
     link: https://blog.hiyqr.top
   - icon: i-ph:book
     link: https://note.hiyqr.top
@@ -18,7 +18,7 @@ socials:
 
 Qirong is an undergraduate student at the [School of Computer Science and Engineering](https://scse.uestc.edu.cn), [UESTC](https://www.uestc.edu.cn). She worked hard to improve her algorithm skills while taking professional courses. At the same time, she is interested in frontend.
 
-<!-- [Curriculum Vitae](/files/cv/en.pdf) / yqr533@gmail.com -->
+[Curriculum Vitae](/files/cv/cn.pdf) / giovannayang@gmail.com
 
 
 ## Education
@@ -88,6 +88,17 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 - [Continual Learning: Meta Continual Learning & Task Free Settings](/files/talks/2020-08-continual-learning.pdf), Peking University, 08/2020
 -->
 
+## Projects
+
+:::paper[/img/about/managesys.png]
+**Student Management System Based on B/S Architecture** 
+
+- Using the [Vue 3](https://vuejs.org/)+[TypeScript](https://www.typescriptlang.org/) technology stack and the [Ant Design Vue](https://www.antdv.com/) component library for front-end web design and implementation.
+- Utilizing the Go language's [Gin](https://gin-gonic.com/zh-cn/) framework as the backend technology stack.
+- Employing [MySQL](https://www.mysql.com/) as the backend database, designing the database table structure, and performing data manipulation operations.
+- [report](/files/学生管理系统.pdf)
+:::
+
 ## Awards and Honors
 
 |                                                                                                                                                                 |         |
@@ -101,7 +112,7 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 - 🚀 This [personal website](https://github.com/giovannayang/giovannayang.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
 
-- 🕹️ Here are my blog [blog.hiyqr.top](https://blog.hiyqr.top) and my notebook [note.hiyqr.top](https://note.hiyqr.top)
+- 🕹️ Here are my another [blog](https://blog.hiyqr.top) and my [notebook](https://note.hiyqr.top)
 
 - 🔭 Ex-PhOer
 
