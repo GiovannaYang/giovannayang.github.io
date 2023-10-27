@@ -18,7 +18,7 @@ socials:
 
 Qirong is an undergraduate student at the [School of Computer Science and Engineering](https://scse.uestc.edu.cn), [UESTC](https://www.uestc.edu.cn). She worked hard to improve her algorithm skills while taking professional courses. At the same time, she is interested in frontend.
 
-[Curriculum Vitae](/files/cv/cn.pdf) / giovannayang@gmail.com
+[Curriculum Vitae](/files/cv/cn.pdf) / giovannayqr@gmail.com
 
 
 ## Education
