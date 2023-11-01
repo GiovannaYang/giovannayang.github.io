@@ -28,8 +28,8 @@ export const rehypePlugins: RehypePlugins = [
     rehypePrettyCode,
     {
       theme: {
-        light: "nord",
-        dark: "nord"
+        light: "material-theme",
+        dark: "material-theme"
       }
     }
   ],
