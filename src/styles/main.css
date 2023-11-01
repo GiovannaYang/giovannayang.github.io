@@ -12,3 +12,8 @@ body {
 html.dark {
   @apply bg-gray-700;
 }
+
+code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #2d2d2d;
+}
