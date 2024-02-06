@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/Projects.astro
 projects:
-  Sophomore:
+  Undergraduate:
     - name: Student Management System
       link: https://github.com/giovannayang/ManagementSystem
       desc: 大二下学期综合课程设计，基于B/S架构的学生管理系统。
@@ -51,7 +51,7 @@ projects:
         - i-vscode-icons:file-type-scss
     - name: note.hiyqr.top
       link: https://note.hiyqr.top
-      desc: This is my notebook, it is powered by VuePress 2.
+      desc: This is my messy notebook, it is powered by VuePress 2.
       icon: i-ph:book
       tech:
         - i-logos:vue

@@ -14,9 +14,11 @@ socials:
     link: https://blog.hiyqr.top
   - icon: i-ph:book
     link: https://note.hiyqr.top
+  - icon: i-ph:notion-logo
+    link: https://yqr.notion.site/Home-fc5e4de67afe4e8ca4b2f21ebbc29645?pvs=74
 ---
 
-Qirong is an undergraduate student at the [School of Computer Science and Engineering](https://scse.uestc.edu.cn), [UESTC](https://www.uestc.edu.cn). She worked hard to improve her algorithm skills while taking professional courses. At the same time, she is interested in frontend.
+Qirong is an undergraduate student at the [School of Computer Science and Engineering](https://scse.uestc.edu.cn), [UESTC](https://www.uestc.edu.cn). She worked hard to improve her algorithm skills while taking professional courses.
 
 [Curriculum Vitae](/files/cv/cn.pdf) / giovannayqr@gmail.com
 
@@ -101,23 +103,24 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 ## Awards and Honors
 
-|                                                                                                                                                                 |         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| **Second Prize**, the University Group A C/C++ Programming category of the 14th _[Lanqiao Cup](https://www.lanqiao.cn/)_ Software Competition, Sichuan Division | 04/2023 |
-| **First Prize**, Outstanding Student Scholarship from UESTC                                                                                                     | 10/2023 |
-| **Second Prize**, Outstanding Student Scholarship from UESTC                                                                                                    | 10/2022 |
-| **First Prize**, The 37th _[Chinese Physics Olympiad](https://cpho.pku.edu.cn)_ (CPhO), Fujian Division                                                         | 09/2020 |
+|                                                                                                                                                                                       |         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| **Second Prize**, the University Group A C/C++ Programming category of the 14th _[Lanqiao Cup](https://www.lanqiao.cn/)_ Software Competition, Sichuan Division                       | 04/2023 |
+| **Third Prize**, the Artificial Intelligence Challenge of the 5th _[National University Computer Skills Challenge](http://www.ncccu.org.cn/index/Index/index.html)_, Sichuan Division | 12/2023 |
+| **First Prize**, Outstanding Student Scholarship from UESTC                                                                                                                           | 10/2023 |
+| **Second Prize**, Outstanding Student Scholarship from UESTC                                                                                                                          | 10/2022 |
+| **First Prize**, the 37th _[Chinese Physics Olympiad](https://cpho.pku.edu.cn)_ (CPhO), Fujian Division                                                                               | 09/2020 |
 
 ## Miscellaneous
 
 - 🚀 This [personal website](https://github.com/giovannayang/giovannayang.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
 
-- 🕹️ Here are my another [blog](https://blog.hiyqr.top) and my [notebook](https://note.hiyqr.top)
+- 🕹️ Here are my [life blog](https://blog.hiyqr.top) and my [notebook](https://note.hiyqr.top)
 
 - 🔭 Ex-PhOer
-
+<!--
 - 🎮 I'm currently interested in **Honkai: Star Rail** and **Genshin Impact**
-
+-->
 - 💯 My dream: `while(sleeping){GPA++;}`
 
 - 😶‍🌫️ Still confused (◞‸◟ )
