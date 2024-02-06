@@ -51,7 +51,7 @@ projects:
         - i-vscode-icons:file-type-scss
     - name: note.hiyqr.top
       link: https://note.hiyqr.top
-      desc: This is my messy notebook, it is powered by VuePress 2.
+      desc: This is my former notebook which is messy and no longer updates. It is powered by VuePress 2.
       icon: i-ph:book
       tech:
         - i-logos:vue

@@ -12,8 +12,6 @@ socials:
     link: https://github.com/giovannayang
   - icon: i-ph:planet
     link: https://blog.hiyqr.top
-  - icon: i-ph:book
-    link: https://note.hiyqr.top
   - icon: i-ph:notion-logo
     link: https://yqr.notion.site/Home-fc5e4de67afe4e8ca4b2f21ebbc29645?pvs=74
 ---
@@ -115,7 +113,7 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 - 🚀 This [personal website](https://github.com/giovannayang/giovannayang.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
 
-- 🕹️ Here are my [life blog](https://blog.hiyqr.top) and my [notebook](https://note.hiyqr.top)
+- 🕹️ Here are my [life blog](https://blog.hiyqr.top)
 
 - 🔭 Ex-PhOer
 <!--
