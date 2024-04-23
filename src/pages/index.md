@@ -12,8 +12,8 @@ socials:
     link: https://github.com/giovannayang
   - icon: i-ph:planet
     link: https://blog.hiyqr.top
-  - icon: i-ph:notion-logo
-    link: https://yqr.notion.site/Home-fc5e4de67afe4e8ca4b2f21ebbc29645?pvs=74
+  - icon: i-iconoir:google-docs
+    link: https://rzo7tkz7fk.feishu.cn/wiki/L5bTwrXg8igPxlkCo44cVY8Gn7c?from=from_copylink
 ---
 
 Qirong is an undergraduate student at the [School of Computer Science and Engineering](https://scse.uestc.edu.cn), [UESTC](https://www.uestc.edu.cn). She worked hard to improve her algorithm skills while taking professional courses.
