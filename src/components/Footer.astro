@@ -1,48 +1,33 @@
 <footer
-  class="max-w-content w-full hstack justify-between font-sys mx-auto mt-20"
-  text="xs lg:sm"
+  class="w-full hstack justify-between font-ui text-sm"
+  m="x-auto t-20"
+  max-w="[720px] lg:[810px]"
 >
-  <span text-c-lighter>
-    <span>© Qirong Yang 2023</span>
+  <span text-fg-light>
+    <span>© Qirang Yang 2024</span>
     <span lt-sm:hidden>· A wizard hiding in the Muggle world</span>
   </span>
-  <span hstack space-x-3>
+
+  <span hstack gap-x-3>
     <a
-      class="footer-item"
-      href="https://github.com/QirongY/portfolio"
-      title="Source code"
+      href="https://github.com/GiovannaYang/giovannayang.github.io"
+      aria-label="Source code"
       target="_blank"
       rel="noopener noreferrer"
+      nav-item
     >
       <div i-lucide:code-2></div>
       <span lt-sm:hidden>Code</span>
     </a>
     <a
-      class="footer-item"
-      href="/rss.xml"
-      title="RSS"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <div i-heroicons:rss-20-solid></div>
-      <span lt-sm:hidden>RSS</span>
-    </a>
-
-    <a
-      class="footer-item"
       href="/sitemap-index.xml"
-      title="Sitemap"
+      aria-label="Sitemap"
       target="_blank"
       rel="noopener noreferrer"
+      nav-item
     >
       <div i-bx:map-alt></div>
       <span lt-sm:hidden>Sitemap</span>
     </a>
   </span>
 </footer>
-
-<style scoped>
-  .footer-item {
-    @apply hstack space-x-1 text-c-lighter hover:text-c-light;
-  }
-</style>

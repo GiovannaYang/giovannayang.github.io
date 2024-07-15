@@ -1,20 +1,21 @@
 ---
 export interface Props {
-  src: string;
+  front: string;
+  back?: string;
   alt?: string;
-  class?: string;
 }
 
-const { src, alt = "" } = Astro.props;
-const className = Astro.props.class || "";
+const { front, back = front, alt = "" } = Astro.props;
 ---
 
-<div class={`flip-image perspective-600 ${className}`}>
-  <img class="no-zoom rounded duration-800 !my-0" src={src} alt={alt} />
+<div class="group relative size-full perspective-600">
+  <img class="no-zoom group-hover:rotate-y-180" src={front} alt={alt} />
+  <img class="no-zoom -rotate-y-180 group-hover:rotate-y-0" src={back} alt={alt} />
 </div>
 
 <style scoped>
-  .flip-image:hover img {
-    @apply rotate-y-180;
+  img {
+    @apply absolute !my-0 rounded-md shadow shadow-neutral-400 dark:shadow-neutral-800 transition-transform duration-700;
+    backface-visibility: hidden;
   }
 </style>

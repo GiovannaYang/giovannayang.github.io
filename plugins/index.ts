@@ -28,9 +28,10 @@ export const rehypePlugins: RehypePlugins = [
     rehypePrettyCode,
     {
       theme: {
-        light: "dark-plus",
-        dark: "dark-plus"
-      }
+        light: "github-light",
+        dark: "github-dark"
+      },
+      keepBackground: false
     }
   ],
   rehypeHeadingIds,

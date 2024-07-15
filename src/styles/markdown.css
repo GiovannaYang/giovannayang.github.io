@@ -8,7 +8,7 @@
 }
 
 .prose a {
-  @apply no-underline hover:underline text-c-active font-normal;
+  @apply no-underline hover:underline underline-offset-4 text-primary font-normal;
 }
 
 .prose img,
@@ -17,17 +17,11 @@
 }
 
 .prose figure figcaption {
-  @apply text-sm text-c-light;
+  @apply text-sm text-fg-light;
 }
 
 .prose hr {
-  border-top: 1px solid #e5e7eb;
-  /* border-c */
-}
-
-html.dark .prose hr {
-  border-top: 1px solid #4b5563;
-  /* border-c */
+  border-top: 1px solid hsl(var(--border));
 }
 
 main:not(.post) a.header-anchor {
@@ -37,7 +31,7 @@ main:not(.post) a.header-anchor {
 /** Table **/
 
 .prose tr {
-  @apply border-t border-c-dark;
+  @apply border-t;
 }
 
 .prose tr:last-child {
@@ -58,16 +52,18 @@ main:not(.post) a.header-anchor {
 
 /** Code blocks **/
 
-html.dark .prose div[class*="language-"] pre[data-theme="light"] {
-  @apply hidden;
+.prose div[class*="language-"] code span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
 }
 
-html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
-  @apply hidden;
+html.dark .prose div[class*="language-"] code span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
 }
 
 .prose div[class*="language-"] {
-  @apply relative my-2 border border-c-dark pt-6 rounded-md;
+  @apply relative my-2 border pt-6 rounded-md;
 }
 
 .prose div[class*="language-"]::before {
@@ -75,33 +71,39 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
   box-shadow: 16px 0 0 0 #febb2f, 32px 0 0 0 #2ec841;
 }
 
-.prose div[class*="language-"]>span.lang {
-  @apply absolute top-2.5 right-3 text-sm opacity-60;
+.prose div[class*="language-"] > span.lang {
+  @apply absolute top-2.5 right-3 text-sm opacity-75;
 }
 
-.prose div[class*="language-"]>p {
+.prose div[class*="language-"] > p {
   @apply hidden;
 }
 
-.prose div[class*="language-"] pre {
-  @apply leading-6 text-[0.925em] m-0 p-4 !bg-transparent;
+.prose div[class*="language-"] figure {
+  @apply m-0;
 }
 
-.prose div[class*="language-"] pre>code {
+.prose div[class*="language-"] pre {
+  @apply m-0 p-4 leading-6 text-[0.925em];
+}
+
+.prose div[class*="language-"] code {
   @apply block w-fit min-w-full;
 }
 
-.prose div[class*="language-"] pre>code>span[data-highlighted-line] {
-  @apply -mx-4 px-4 inline-block;
+.prose div[class*="language-"] code > span[data-highlighted-line] {
+  @apply -mx-4 px-4 inline-block bg-bg-dark/70;
   width: calc(100% + 2 * 16px);
 }
 
-.prose div[class*="language-"] pre[data-theme="light"]>code>span[data-highlighted-line] {
-  @apply bg-slate-100;
+html.dark .prose div[class*="language-"] code > span[data-highlighted-line] {
+  @apply bg-bg-dark/70;
 }
 
-.prose div[class*="language-"] pre[data-theme="dark"]>code>span[data-highlighted-line] {
-  @apply bg-slate-600;
+/** Inline code **/
+
+.prose :not(pre) > code {
+  @apply text-sm;
 }
 
 /** Containers **/
@@ -111,7 +113,7 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
 }
 
 .prose .custom-block.details {
-  @apply border-c-dark py-4;
+  @apply py-4;
 }
 
 .prose .custom-block.details summary {
@@ -119,39 +121,39 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
 }
 
 .prose .custom-block.info {
-  @apply border-blue-600 dark:border-sky-400;
+  @apply border-info;
 }
 
 .prose .custom-block.info .custom-block-title {
-  @apply text-blue-600 dark:text-sky-400;
+  @apply text-info;
 }
 
 .prose .custom-block.tip {
-  @apply border-green-600 dark:border-lime-500;
+  @apply border-success;
 }
 
 .prose .custom-block.tip .custom-block-title {
-  @apply text-green-600 dark:text-lime-500;
+  @apply text-success;
 }
 
 .prose .custom-block.warning {
-  @apply border-amber-600 dark:border-amber-500;
+  @apply border-warning;
 }
 
 .prose .custom-block.warning .custom-block-title {
-  @apply text-amber-600 dark:text-amber-500;
+  @apply text-warning;
 }
 
 .prose .custom-block.danger {
-  @apply border-red-600 dark:border-red-400;
+  @apply border-danger;
 }
 
 .prose .custom-block.danger .custom-block-title {
-  @apply text-red-600 dark:text-red-400;
+  @apply text-danger;
 }
 
 .prose .paper-block {
-  @apply flex py-3 space-x-5 lt-sm:space-x-0 border-t border-c-dark;
+  @apply flex py-3 gap-x-5 lt-sm:gap-x-0 border-t;
 }
 
 .prose .paper-block .paper-images {
@@ -162,11 +164,11 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
   @apply bg-white;
 }
 
-.prose .paper-block .paper-images>div {
+.prose .paper-block .paper-images > div {
   @apply space-y-1;
 }
 
-.prose .paper-block .paper-images>div img {
+.prose .paper-block .paper-images > div img {
   @apply my-0;
 }
 
@@ -181,9 +183,9 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
 /** Medium Zoom **/
 
 .medium-zoom-overlay {
-  @apply z-100 !bg-c;
+  @apply z-100 !bg-bg;
 }
 
-.medium-zoom-overlay~img {
+.medium-zoom-overlay ~ img {
   @apply z-101;
 }

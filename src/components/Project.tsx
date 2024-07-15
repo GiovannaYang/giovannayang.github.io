@@ -1,4 +1,5 @@
-import { onMount, createSignal, type Component } from "solid-js";
+import { onMount, createSignal, Show, Switch, Match, For } from "solid-js";
+import type { Component } from "solid-js";
 import { OhVueIcons, OhMyCV } from "./icons";
 import type { ProjectItem } from "@types";
 
@@ -16,42 +17,44 @@ export const Project: Component<{ project: ProjectItem }> = (props) => {
 
   return (
     <a
-      class="relative hstack space-x-5 p-4 !no-underline !text-c"
-      border="~ c hover:transparent"
-      bg="hover:gray-100 dark:hover:gray-600"
+      class="relative hstack gap-x-5 p-4 !no-underline !text-fg"
+      border="~ border/60 hover:transparent"
+      bg="hover:bg-dark"
       href={props.project.link}
       title={props.project.name}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div class="flex-auto">
+      <div flex-auto h-full>
         <div class="hstack flex-wrap">
           <div whitespace-nowrap mr-3>
             {props.project.name}
           </div>
-          <div hstack space-x-2>
-            {props.project.tech &&
-              props.project.tech.map((icon) => <span class={`text-xs ${icon}`} />)}
+          <div hstack gap-x-2>
+            <For each={props.project.tech}>
+              {(icon) => <span class={`text-xs ${icon}`} />}
+            </For>
 
-            {star() && (
-              <span hstack space-x-1>
+            <Show when={star()}>
+              <span hstack gap-x-1>
                 <span i-noto-v1:star text-xs />
                 <span class="text-sm mt-0.5">{star()}</span>
               </span>
-            )}
+            </Show>
           </div>
         </div>
-        <div mt-1 text="sm c-lighter" innerHTML={props.project.desc} />
+        <div mt-1 text="sm fg-light" innerHTML={props.project.desc} />
       </div>
 
-      <div pt-2 text="3xl c-lighter">
-        {props.project.icon === "oh-vue-icons" ? (
-          <OhVueIcons />
-        ) : props.project.icon === "oh-my-cv" ? (
-          <OhMyCV />
-        ) : (
-          <div class={props.project.icon || "i-carbon-unknown"} />
-        )}
+      <div pt-2 text="3xl fg-light">
+        <Switch fallback={<div class={props.project.icon || "i-carbon-unknown"} />}>
+          <Match when={props.project.icon === "oh-vue-icons"}>
+            <OhVueIcons />
+          </Match>
+          <Match when={props.project.icon === "oh-my-cv"}>
+            <OhMyCV />
+          </Match>
+        </Switch>
       </div>
     </a>
   );

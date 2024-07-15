@@ -1,18 +1,29 @@
 @import "./markdown.css";
 @import "./about.css";
 @import "./fonts.css";
-@import "./post.css";
-@import "./components.css";
+
+html {
+  scroll-behavior: smooth;
+}
 
 html,
 body {
-  @apply h-full m-0 p-0;
+  height: 100%;
 }
 
-html.dark {
-  @apply bg-gray-700;
+/* Navbar */
+
+header .prompt {
+  vertical-align: -0.2em;
+  font-size: 0.85em;
 }
 
-div[class*="language-"] {
-    background-color: #2d2d2d;
+header .blink {
+  animation: blinker 1s none infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }

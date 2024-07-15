@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer.astro";
 import { SITE } from "@config";
@@ -34,7 +35,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="icon" href="/favicon.ico" type="image/ico" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
@@ -59,19 +60,29 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:description" content={description} />
     <meta property="twitter:url" content={canonicalURL} />
 
+    <!-- Color Theme -->
     <script>
-      (function () {
+      const checkTheme = () => {
         const prefersDark =
           window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
         const setting = localStorage.getItem("solidjs-use-color-scheme") || "auto";
-        if (setting === "dark" || (prefersDark && setting !== "light"))
+
+        document.documentElement.classList.toggle(`theme-${setting}`, true);
+
+        if (setting === "dark" || (setting !== "light" && prefersDark))
           document.documentElement.classList.toggle("dark", true);
-      })();
+      };
+
+      document.addEventListener("astro:after-swap", checkTheme);
+      checkTheme();
     </script>
+
+    <!-- Page Transitions -->
+    <ViewTransitions />
   </head>
 
   <body class="font-sans">
-    <main class={`${className} flex flex-col min-h-full text-c px-4 pt-24 pb-4 md:pb-6`}>
+    <main class={`${className} flex flex-col min-h-full px-4 pt-24 pb-4 md:pb-6`}>
       <Navbar client:load activePage={activePage} hasToc={hasToc} />
       <div class="flex-1 mb-6">
         <div class="prose prose-lg mx-auto">
@@ -80,5 +91,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       </div>
       <Footer />
     </main>
+    <script>
+      // Astro's View Transitions feature deletes styles and class names injected by
+      // medium-zoom when navigating to a new page, which causes the zoom effect to
+      // disappear after page transition.
+      // So here I have to import css and js files separately and re-attach the zoom effect.
+      import mediumZoom from "medium-zoom/dist/pure";
+      import "medium-zoom/dist/style.css";
+
+      const zoom = mediumZoom();
+
+      document.addEventListener("astro:page-load", () => {
+        zoom.attach(":not(a) > img:not(.no-zoom)");
+      });
+    </script>
   </body>
 </html>

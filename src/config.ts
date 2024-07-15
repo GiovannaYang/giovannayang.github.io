@@ -13,12 +13,3 @@ export const THEME = {
   },
   lastUpdatedText: "Last updated:"
 };
-
-export const GISCUS = {
-  repo: "giovannayang/comments",
-  repoId: "R_kgDOJ12dzw",
-  category: "Announcements",
-  categoryId: "DIC_kwDOJ12dz84CXkh1",
-  light: "light",
-  dark: `${SITE.website}/css/giscus-dark.css`
-};
