@@ -10,7 +10,6 @@ projects:
         - i-logos:gin
         - i-logos:jwt-icon
         - i-logos:mysql-icon
-      repo: giovannayang/ManagementSystem
     - name: Student Management System
       link: https://github.com/giovannayang/ManagementSystem-front
       desc: 大二下学期综合课程设计，基于B/S架构的学生管理系统。(前端)
@@ -20,7 +19,6 @@ projects:
         - i-logos:typescript-icon
         - i-logos:ant-design
         - i-simple-icons:axios
-      repo: giovannayang/ManagementSystem-front
     - name: VolunteerApp
       link: https://github.com/giovannayang/VolunteerApp
       desc: 2023夏季实习项目，一个与志愿服务相关的Android应用程序。
@@ -30,7 +28,6 @@ projects:
         - i-logos:android-icon
         - i-logos:google-maps
         - i-devicon:sqlite
-      repo: giovannayang/ManagementSystem-front
     - name: VotingSystem
       link: https://github.com/giovannayang/VotingSystem
       desc: 参加全国大学生信息安全竞赛作品赛，基于函数秘密共享的高效电子投票方案。
@@ -42,7 +39,6 @@ projects:
         - i-logos:go
         - i-logos:gin
         - i-logos:mysql-icon
-      repo: giovannayang/ManagementSystem-front
   Websites:
     - name: hiyqr.top
       link: https://hiyqr.top
