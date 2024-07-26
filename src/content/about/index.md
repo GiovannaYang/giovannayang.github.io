@@ -115,8 +115,6 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 - 🚀 This [personal website](https://github.com/giovannayang/giovannayang.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
 
-- 🕹️ Here are my [life blog](https://blog.hiyqr.top)
-
 - 🔭 Ex-PhOer
 
 - 🎮 I'm currently interested in **Animal Crossing: New Horizons**
