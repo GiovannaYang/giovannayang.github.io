@@ -1,19 +1,37 @@
 import { onMount, createSignal, Show, Switch, Match, For } from "solid-js";
 import type { Component } from "solid-js";
+import type { GithubRepoInfo, ProjectItem } from "@types";
 import { OhVueIcons, OhMyCV } from "./icons";
-import type { ProjectItem } from "@types";
 
 export const Project: Component<{ project: ProjectItem }> = (props) => {
-  /* eslint-disable-next-line solid/reactivity */
+  // eslint-disable-next-line solid/reactivity
   const api = "https://api.github.com/repos/" + props.project.repo;
-  const [star, setStar] = createSignal<string>();
+  const [data, setData] = createSignal<GithubRepoInfo>();
 
-  const getRepoStars = async () => {
-    const data = await fetch(api).then((res) => res.json());
-    return data.stargazers_count;
+  const getRepo = async () => {
+    const result = await fetch(api).then((res) => res.json());
+
+    const formattedData: GithubRepoInfo = {
+      name: result.name,
+      fullName: result.full_name,
+      description: result.description,
+      url: result.html_url,
+      stars: result.stargazers_count,
+      forks: result.forks_count,
+      watchers: result.watchers_count,
+      language: result.language,
+      visibility: result.private ? "Private" : "Public",
+      template: result.is_template,
+      ownerType: result.owner.type,
+      license: result.license
+        ? { name: result.license.name, url: result.license.url }
+        : null
+    };
+
+    return formattedData;
   };
 
-  onMount(async () => props.project.repo && setStar(await getRepoStars()));
+  onMount(async () => props.project.repo && setData(await getRepo()));
 
   return (
     <a
@@ -35,10 +53,10 @@ export const Project: Component<{ project: ProjectItem }> = (props) => {
               {(icon) => <span class={`text-xs ${icon}`} />}
             </For>
 
-            <Show when={star()}>
+            <Show when={data()}>
               <span hstack gap-x-1>
                 <span i-noto-v1:star text-xs />
-                <span class="text-sm mt-0.5">{star()}</span>
+                <span class="text-sm mt-0.5">{data()?.stars}</span>
               </span>
             </Show>
           </div>
