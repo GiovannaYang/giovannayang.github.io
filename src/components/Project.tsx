@@ -24,7 +24,11 @@ export const Project: Component<{ project: ProjectItem }> = (props) => {
         )}
         <span class="flex-1 w-px overflow-hidden font-bold whitespace-nowrap">
           <a
-            href={props.project.link ? props.project.link : data()?.url}
+            href={
+              props.project.link
+                ? props.project.link
+                : `https://github.com/${props.project.repo}`
+            }
             target="_blank"
             rel="noopener noreferrer"
           >
