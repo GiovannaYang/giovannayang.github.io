@@ -8,9 +8,7 @@ export interface ProjectItem {
   name: string;
   link: string;
   desc: string;
-  icon: string;
-  tech?: string[];
-  repo: string;
+  repo?: string;
 }
 
 export interface GithubRepoInfo {
@@ -22,6 +20,7 @@ export interface GithubRepoInfo {
   forks: number;
   watchers: number;
   language: string;
+  languageColor: string;
   visibility: "Private" | "Public";
   template: boolean;
   ownerType: "User" | "Organization";

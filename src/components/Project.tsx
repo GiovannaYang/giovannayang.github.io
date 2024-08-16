@@ -1,80 +1,83 @@
-import { onMount, createSignal, Show, Switch, Match, For } from "solid-js";
+import { onMount, createSignal } from "solid-js";
 import type { Component } from "solid-js";
 import type { GithubRepoInfo, ProjectItem } from "@types";
-import { OhVueIcons, OhMyCV } from "./icons";
 
 export const Project: Component<{ project: ProjectItem }> = (props) => {
-  // eslint-disable-next-line solid/reactivity
-  const api = "https://api.github.com/repos/" + props.project.repo;
-  const [data, setData] = createSignal<GithubRepoInfo>();
+  const [data, setData] = createSignal<GithubRepoInfo | null>(null);
 
   const getRepo = async () => {
-    const result = await fetch(api).then((res) => res.json());
+    const api = "https://api.pengzhanbo.cn/github/repo/" + props.project.repo;
+    const result = (await fetch(api).then((res) => res.json())) as GithubRepoInfo;
 
-    const formattedData: GithubRepoInfo = {
-      name: result.name,
-      fullName: result.full_name,
-      description: result.description,
-      url: result.html_url,
-      stars: result.stargazers_count,
-      forks: result.forks_count,
-      watchers: result.watchers_count,
-      language: result.language,
-      visibility: result.private ? "Private" : "Public",
-      template: result.is_template,
-      ownerType: result.owner.type,
-      license: result.license
-        ? { name: result.license.name, url: result.license.url }
-        : null
-    };
-
-    return formattedData;
+    return result;
   };
 
   onMount(async () => props.project.repo && setData(await getRepo()));
 
   return (
-    <a
-      class="relative hstack gap-x-5 p-4 !no-underline !text-fg"
-      border="~ border/60 hover:transparent"
-      bg="hover:bg-dark"
-      href={props.project.link}
-      title={props.project.name}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <div flex-auto h-full>
-        <div class="hstack flex-wrap">
-          <div whitespace-nowrap mr-3>
-            {props.project.name}
-          </div>
-          <div hstack gap-x-2>
-            <For each={props.project.tech}>
-              {(icon) => <span class={`text-xs ${icon}`} />}
-            </For>
-
-            <Show when={data()}>
-              <span hstack gap-x-1>
-                <span i-noto-v1:star text-xs />
-                <span class="text-sm mt-0.5">{data()?.stars}</span>
-              </span>
-            </Show>
-          </div>
-        </div>
-        <div mt-1 text="sm fg-light" innerHTML={props.project.desc} />
+    <div class="flex flex-col p-4 my-4 border border-gray-300 rounded-lg duration-300 font-ui hover:border-[#377bb5]">
+      <p class="flex items-center gap-2 max-w-full text-lg no-underline duration-300">
+        {props.project.repo ? (
+          <span i-octicon:repo-16 text-xs text-gray-600 />
+        ) : (
+          <span i-mdi:web-asset text-xs text-gray-600 />
+        )}
+        <span class="flex-1 w-px overflow-hidden font-bold whitespace-nowrap">
+          <a
+            href={props.project.link ? props.project.link : data()?.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {props.project.name
+              ? props.project.name
+              : data()?.ownerType === "Organization"
+                ? data()?.fullName
+                : data()?.name}
+          </a>
+        </span>
+        {data()?.visibility ? (
+          <span class="inline-block px-2 text-xs text-gray-400 leading-5 border rounded-full">
+            {`${data()?.visibility}${data()?.template ? " Template" : ""}`}
+          </span>
+        ) : (
+          <span class="inline-block px-2 text-xs text-gray-400 leading-5 border rounded-full">
+            Private
+          </span>
+        )}
+      </p>
+      <p class="flex-1 text-sm leading-6 text-gray-600">
+        {props.project.desc ? props.project.desc : data()?.description}
+      </p>
+      <div class="flex gap-4 items-center justify-start text-sm leading-6 text-gray-600">
+        {data()?.language && (
+          <p flex gap-x-1 items-center>
+            <span
+              style={{ "background-color": data()?.languageColor }}
+              class="inline-block w-2 h-2 rounded-full"
+            />
+            <span>{data()?.language}</span>
+          </p>
+        )}
+        {data() && (
+          <p flex gap-x-1 items-center>
+            <span i-ph:star text-xs />
+            <span>{data()?.stars}</span>
+          </p>
+        )}
+        {data() && (
+          <p flex gap-x-1 items-center>
+            <span i-ph:git-fork text-xs />
+            <span>{data()?.forks}</span>
+          </p>
+        )}
+        {data()?.license && (
+          <p flex gap-x-1 items-center>
+            <span i-cil:balance-scale text-xs />
+            <span>{data()?.license.name}</span>
+          </p>
+        )}
       </div>
-
-      <div pt-2 text="3xl fg-light">
-        <Switch fallback={<div class={props.project.icon || "i-carbon-unknown"} />}>
-          <Match when={props.project.icon === "oh-vue-icons"}>
-            <OhVueIcons />
-          </Match>
-          <Match when={props.project.icon === "oh-my-cv"}>
-            <OhMyCV />
-          </Match>
-        </Switch>
-      </div>
-    </a>
+    </div>
   );
 };
 
