@@ -6,26 +6,11 @@ export interface SocialItem {
 
 export interface ProjectItem {
   name: string;
-  link: string;
+  link?: string;
   desc: string;
   repo?: string;
-}
-
-export interface GithubRepoInfo {
-  name: string;
-  fullName: string;
-  description: string;
-  url: string;
-  stars: number;
-  forks: number;
-  watchers: number;
+  visibility: string;
   language: string;
   languageColor: string;
-  visibility: "Private" | "Public";
-  template: boolean;
-  ownerType: "User" | "Organization";
-  license: {
-    name: string;
-    url: string;
-  } | null;
+  license: string;
 }
