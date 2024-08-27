@@ -2,8 +2,8 @@
 name: Qirong Yang
 subname: 杨骐榕
 tltr: Undergraduate Student at UESTC
-avatarFront: img/avatar.jpg
-avatarBack: img/me.jpg
+avatarFront: https://raw.gitmirror.com/GiovannaYang/images/main/info/me.jpg
+avatarBack: https://raw.gitmirror.com/GiovannaYang/images/main/info/photo.jpg
 socials:
   - icon: i-academicons:cv
     link: /files/cv/cn.pdf

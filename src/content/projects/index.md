@@ -44,7 +44,7 @@ projects:
       desc: This version of my blog is used to share my life.
       visibility: Private
       license: MIT
-      language: TypeScript
+      language: Vue
       languageColor: "#3178c6"
 ---
 
