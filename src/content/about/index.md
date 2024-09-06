@@ -5,8 +5,6 @@ tltr: Undergraduate Student at UESTC
 avatarFront: https://raw.gitmirror.com/GiovannaYang/images/main/info/me.jpg
 avatarBack: https://raw.gitmirror.com/GiovannaYang/images/main/info/photo.jpg
 socials:
-  - icon: i-academicons:cv
-    link: /files/cv/cn.pdf
   - icon: i-ion:mail-outline
     link: "mailto:giovannayqr@gmail.com"
   - icon: i-eva:github-outline
@@ -17,7 +15,7 @@ socials:
 
 Qirong is an undergraduate student at the [School of Computer Science and Engineering](https://scse.uestc.edu.cn), [UESTC](https://www.uestc.edu.cn). She worked hard to improve her algorithm skills while taking professional courses.
 
-[Curriculum Vitae](/files/cv/cn.pdf) / giovannayqr@gmail.com
+Contact me: giovannayqr@gmail.com
 
 
 ## Education
